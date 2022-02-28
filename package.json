@@ -72,6 +72,7 @@
     "wrappy": "^1.0.2"
   },
   "devDependencies": {
+    "@ls-lint/ls-lint": "^1.11.0",
     "babel-preset-airbnb": "^5.0.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -79,8 +80,7 @@
     "markdownlint": "^0.25.1"
   },
   "scripts": {
-    "test": "npm run --silent test:config && npm run --silent test:config:base",
-    "lint": "markdownlint --config linters/.markdownlint.json README.md */README.md"
+    "ls-lint": "ls-lint"
   },
   "repository": {
     "type": "git",
