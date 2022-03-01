@@ -84,7 +84,7 @@
     "prettier": "2.5.1"
   },
   "scripts": {
-    "lint-ls": "ls-lint",
+    "ls-lint": "ls-lint",
     "prepare": "husky install",
     "lint": "eslint --fix src",
     "format": "prettier --write src"
