@@ -80,6 +80,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2",
     "husky": "^7.0.0",
+    "lite-server": "^2.6.1",
     "markdownlint": "^0.25.1",
     "prettier": "2.5.1"
   },
@@ -87,7 +88,8 @@
     "ls-lint": "ls-lint",
     "prepare": "husky install",
     "lint": "eslint --fix src",
-    "format": "prettier --write src"
+    "format": "prettier --write src",
+    "dev": "lite-server"
   },
   "repository": {
     "type": "git",
