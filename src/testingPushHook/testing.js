@@ -4,4 +4,4 @@ function returnSomethingForEslintTestToPassToCheckPushHook() {
   return a;
 }
 
-let b = returnSomethingForEslintTestToPassToCheckPushHook();
+returnSomethingForEslintTestToPassToCheckPushHook();
