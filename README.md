@@ -25,6 +25,8 @@
 <ul>
 <li>jQuery</li>
 <li>HTML</li>
+    <li>Lit-html for templating</li>
+    <li>pageJS for routing</li>
 </ul>
 
 <h1>Back-end</h1>
