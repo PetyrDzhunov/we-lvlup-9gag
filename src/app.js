@@ -12,8 +12,5 @@ import decorateContext from './middlewares/decorateContext.js';
 page(decorateContext);
 page('/', homePage);
 page('/memes', memesPage);
-// page('/user/:user/edit', edit);
-// page('/user/:user/album', album);
-// page('/user/:user/album/sort', sort);
-// page('*', notfound);
+
 page.start();
