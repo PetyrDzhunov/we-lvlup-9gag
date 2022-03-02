@@ -9,17 +9,20 @@ import { html } from '../lib.js';
 function jQueryFunction() {
   $(function () {
     // eslint-disable-next-line no-alert
-    $('h1').text('Changed text').css('background-color', 'blue');
+    $('h1').text('Changed text').css('color', 'blue');
+    $('.toggle').click(function () {
+      $('h1').toggle();
+    });
   });
 }
 
-const homeTemplate = () =>
-  html`
-    ${jQueryFunction()}
-    <section>
-      <h1>9GAG</h1>
-    </section>
-  `;
+const homeTemplate = () => html`
+  <section>
+    <h1>9GAG</h1>
+    <button class="toggle">Toggle h1</button>
+  </section>
+  ${jQueryFunction()}
+`;
 
 export async function homePage(ctx) {
   ctx.render(homeTemplate());
