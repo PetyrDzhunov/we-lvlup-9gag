@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/extensions
-import { render } from '../lib.js';
+
+import { render } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 const root = document.getElementById('app');
 

@@ -5,9 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "eslint-utils": "^3.0.0",
-    "eslint-visitor-keys": "^3.3.0",
-    "lit-html": "^2.2.0",
-    "page": "^1.11.6"
+    "eslint-visitor-keys": "^3.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",

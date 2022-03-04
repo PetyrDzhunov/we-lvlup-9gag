@@ -3,7 +3,8 @@
 /* eslint-disable func-names */
 /* eslint-disable no-undef */
 /* eslint-disable prefer-arrow-callback */
-import { html } from '../lib.js';
+import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
+
 
 const createMemeTemplate = () => html` <section>createMeme page</section> `;
 
