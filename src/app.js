@@ -1,7 +1,7 @@
-import { createPage } from './views/createMeme.js';
+import createPage from './pages/createMeme.js';
 import decorateContext from './middlewares/decorateContext.js';
-import { freshPage } from './views/freshMemes.js';
-import homePage from './views/homePage.js';
+import freshPage from './pages/freshMemes.js';
+import homePage from './pages/homePage.js';
 
 page(decorateContext);
 page('/', homePage);

@@ -22,7 +22,21 @@
     "prefer-arrow-callback": "off",
     "func-names": "off",
     "no-undef": "off",
-    "sort-imports": "warn",
-    "import/no-unresolved": [2, { "ignore": ["\\?module"] }]
+    "import/no-unresolved": [2, { "ignore": ["\\?module"] }],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "index",
+          "sibling",
+          "parent",
+          "internal",
+          "external",
+          "builtin",
+          "object",
+          "type"
+        ]
+      }
+    ]
   }
 }

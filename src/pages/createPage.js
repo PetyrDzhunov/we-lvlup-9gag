@@ -8,6 +8,6 @@ import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 const createMemeTemplate = () => html` <section>createMeme page</section> `;
 
-export async function createPage(ctx) {
+export default async function createPage(ctx) {
   ctx.render(createMemeTemplate());
 }
