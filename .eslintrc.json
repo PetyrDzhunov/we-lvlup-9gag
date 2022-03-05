@@ -8,5 +8,21 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "rules": {}
+  "globals": {
+    "page": "readonly"
+  },
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "always"
+      }
+    ],
+    "prefer-arrow-callback": "off",
+    "func-names": "off",
+    "no-undef": "off",
+    "sort-imports": "warn",
+    "import/no-unresolved": [2, { "ignore": ["\\?module"] }]
+  }
 }
