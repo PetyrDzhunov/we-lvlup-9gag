@@ -18,7 +18,6 @@ ls:
   src/styles:
     .dir: kebab-case
     .module.scss: PascalCase
-    .scss: kebab-case
   src/utils:
     .dir: camelCase
     .tsx: camelCase | lowercase
