@@ -25,7 +25,9 @@
     "prepare": "husky install",
     "lint": "eslint --fix src",
     "format": "prettier --write src",
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "css": "node-sass --include-path scss src/styles/main.scss src/styles/main.css",
+    "watch": "nodemon -e scss -x npm run css"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,7 @@ export default function homeTemplate() {
   return html`
     <section>
       <h1>9GAG</h1>
-      <button class="toggle">Toggle h1</button>
+      <button class="test__part1">Toggle h1</button>
     </section>
     ${homePageJqueryFunction()}
   `;
