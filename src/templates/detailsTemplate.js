@@ -1,6 +1,6 @@
-import detailsJqueryFunction from '../jQuery/detailsjQuery.js';
+import detailsJqueryFunction from "../jQuery/detailsjQuery.js";
 
-import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
+import { html } from "https://unpkg.com/lit-element/lit-element.js?module";
 
 export default function detailsTemplate() {
   return html`
