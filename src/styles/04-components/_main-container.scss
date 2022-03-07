@@ -1,0 +1,27 @@
+#app-container {
+  padding-top: 60px !important;
+  width: 972px;
+  padding: 48px 16px 32px;
+  margin: 0 auto;
+}
+
+#page {
+  margin-left: $drawer-width !important;
+  width: 972px;
+  padding-top: 16px;
+  margin: 0 auto 32px;
+}
+
+#page-content {
+  float: left;
+  width: 640px;
+}
+
+#sidebar {
+  float: right;
+  padding: 0 2px 30px;
+  width: 300px;
+  position: relative;
+  border-left: 1px solid black;
+  height: calc(100% - 60px);
+}

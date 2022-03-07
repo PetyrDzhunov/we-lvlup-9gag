@@ -1,0 +1,17 @@
+.navbar-header {
+  background-color: #fff;
+  min-width: 100%;
+  position: fixed;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 60px;
+}
+
+.navbar {
+  background-color: inherit !important;
+}
+
+.nav-wrap {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 6px;
+}
