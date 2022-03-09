@@ -1,4 +1,4 @@
-import createMemejQueryFunction from '../jQuery/createjQuery.js';
+import createMemejQueryFunction from '../utils/DOM/createjQuery.js';
 
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 

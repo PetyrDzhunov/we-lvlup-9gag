@@ -1,4 +1,4 @@
-import registerjQuery from '../jQuery/registerjQuery.js';
+import registerjQuery from '../utils/DOM/registerjQuery.js';
 
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 

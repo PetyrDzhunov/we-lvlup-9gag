@@ -2,8 +2,8 @@ const routes = {
   home: '/',
   fresh: '/fresh-memes',
   create: '/create-meme',
-  login: '/register',
-  register: '/login',
+  login: '/login',
+  register: '/register',
   details: (id) => `/details/${id}`,
 };
 

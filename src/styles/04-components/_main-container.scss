@@ -1,12 +1,12 @@
 #app-container {
   padding-top: 60px !important;
-  width: 972px;
+  width: 1228px;
   padding: 48px 16px 32px;
   margin: 0 auto;
 }
 
 #page {
-  margin-left: $drawer-width !important;
+  margin-left: $drawer-width + 16 !important;
   width: 972px;
   padding-top: 16px;
   margin: 0 auto 32px;
