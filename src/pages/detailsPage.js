@@ -1,4 +1,4 @@
-import detailsTemplate from "../templates/detailsTemplate.js";
+import detailsTemplate from '../templates/detailsTemplate.js';
 
 export default async function freshPage(ctx) {
   const { id } = ctx;

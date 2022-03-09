@@ -1,4 +1,4 @@
-import detailsJqueryFunction from '../utils/DOM/detailsjQuery.js';
+import detailsJqueryFunction from '../utils/dom/detailsjQuery.js';
 
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 

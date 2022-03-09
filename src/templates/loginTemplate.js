@@ -1,4 +1,4 @@
-import loginjQueryFunction from '../utils/DOM/loginjQuery.js';
+import loginjQueryFunction from '../utils/dom/loginjQuery.js';
 
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
