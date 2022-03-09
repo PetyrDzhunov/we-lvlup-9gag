@@ -7,6 +7,7 @@ import loginPage from './pages/loginPage.js';
 import detailsPage from './pages/detailsPage.js';
 import routes from './routes.js';
 
+console.log(auth);
 page(decorateContext);
 page(routes.home, homePage);
 page(routes.fresh, freshPage);
