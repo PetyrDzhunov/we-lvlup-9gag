@@ -1,4 +1,4 @@
-import freshjQueryFunction from '../utils/DOM/freshjQuery.js';
+import freshjQueryFunction from '../utils/dom/freshjQuery.js';
 
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
