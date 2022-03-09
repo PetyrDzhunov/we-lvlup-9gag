@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 const focusModal = () => {
@@ -6,7 +7,7 @@ const focusModal = () => {
   });
 };
 
-export default function modalTemplate(authenticate) {
+export default function modalTemplate(authenticate, requiresFullName = false) {
   return html`
     <button
       type="button"
@@ -38,8 +39,17 @@ export default function modalTemplate(authenticate) {
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <input type="$1" id="email" placeholder="Email adress" />
+          <div class="modal-body d-flex flex-column">
+            ${requiresFullName
+              ? html`<input class="m-2" type="$1" placeholder="Full name" />`
+              : null}
+            <input
+              type="$1"
+              class="m-2"
+              id="email"
+              placeholder="Email adress"
+            />
+            <input type="$1" class="m-2" id="password" placeholder="Password" />
           </div>
           <div class="modal-footer">
             <button

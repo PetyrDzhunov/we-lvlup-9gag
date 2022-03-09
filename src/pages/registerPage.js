@@ -1,5 +1,5 @@
-import registerTemplate from '../templates/registerTemplate.js';
+import modalTemplate from '../templates/components/modal.js';
 
 export default async function loginPage(ctx) {
-  ctx.render(registerTemplate());
+  ctx.render(modalTemplate('Sign up', true));
 }
