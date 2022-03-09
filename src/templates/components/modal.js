@@ -11,7 +11,7 @@ export default function modalTemplate(
   authenticate,
   onSubmit,
   customId,
-  requiresFullName = false
+  requiresFullName = false,
 ) {
   return html`
     <button
@@ -56,16 +56,16 @@ export default function modalTemplate(
                   />`
                 : null}
               <input
-                type="$1"
+                type="email"
                 class="m-2"
                 id="email"
                 placeholder="Email adress"
                 name="email"
               />
               <input
-                type="$1"
                 class="m-2"
                 id="password"
+                type="password"
                 placeholder="Password"
                 name="password"
               />
