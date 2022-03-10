@@ -32,5 +32,5 @@
 
 <h1>Back-end</h1>
 <ul>
-<li>Not yet decided.</li>
+<li>Firebase for authentication and as a database</li>
 </ul>
