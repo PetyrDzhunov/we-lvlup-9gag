@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <link rel="stylesheet" href="src/styles/main.css" />
@@ -17,102 +13,85 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth-compat.js"></script>
     <script>
-    const firebaseApp = firebase.initializeApp({
-       apiKey: 'AIzaSyAQslrpmvKieyxWl5o7qaoa36ehzlfNWFw',
-        authDomain: 'we-lvlup-9gag.firebaseapp.com',
-        projectId: 'we-lvlup-9gag',
-        storageBucket: 'we-lvlup-9gag.appspot.com',
-        messagingSenderId: '1026995329645',
-        appId: '1:1026995329645:web:805c5845b6688b983a3d64'});
-    const db = firebaseApp.firestore();
-    const auth = firebaseApp.auth();
+        const firebaseApp = firebase.initializeApp({
+            apiKey: 'AIzaSyAQslrpmvKieyxWl5o7qaoa36ehzlfNWFw',
+            authDomain: 'we-lvlup-9gag.firebaseapp.com',
+            projectId: 'we-lvlup-9gag',
+            storageBucket: 'we-lvlup-9gag.appspot.com',
+            messagingSenderId: '1026995329645',
+            appId: '1:1026995329645:web:805c5845b6688b983a3d64'
+        });
+        const db = firebaseApp.firestore();
+        const auth = firebaseApp.auth();
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="module" src="/src/app.js" defer></script>
 
     <title>9GAG: Go Fun The World</title>
-  </head>
-  <body>
-    <header class="navbar-header">
-      <div class="nav-wrap">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light">
-          <div class="container-fluid">
-            <button
-              class="btn-collapse-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarToggleExternalContent"
-              aria-controls="navbarToggleExternalContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+</head>
+
+<body>
+    <header class="navbar-header sticky-top">
+        <div class="nav-wrap">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light">
+                <div class="container-fluid">
+                    <button class="btn-collapse-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="/">9GAG</a>
+                    <a class="navbar-brand" href="/">9GAG</a>
 
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon red-text"></span>
             </button>
-            <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li></li>
-              </ul>
+                    <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li></li>
+                        </ul>
 
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li><a class="navbar-link">🔀 Shuffle</a></li>
-                <li><a class="navbar-link">📱 Get App</a></li>
-                <li><a class="navbar-link">🔞</a></li>
-                <li><a class="navbar-link">Donate</a></li>
-                <li><a class="navbar-link">UA</a></li>
-                <li><a class="navbar-link">Crypto</a></li>
-                <li><a class="navbar-link">Ask Germany</a></li>
-                <li><a class="navbar-link">My Workplace</a></li>
-                <li><a class="navbar-link">Car</a></li>
-              </ul>
-              
-            </div>
-            <div class="navbar__right-menu">
-              <li><a class="navbar-link" id="login-btn" href="/login">Log in</a></li>
-              <li><a class="navbar-link logout-btn" id="register-btn" href="/register">Sign up</a></li>
-            </div>
-          </div>
-        </nav>
-      </div>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li><a class="navbar-link">🔀 Shuffle</a></li>
+                            <li><a class="navbar-link">📱 Get App</a></li>
+                            <li><a class="navbar-link">🔞</a></li>
+                            <li><a class="navbar-link">Donate</a></li>
+                            <li><a class="navbar-link">UA</a></li>
+                            <li><a class="navbar-link">Crypto</a></li>
+                            <li><a class="navbar-link">Ask Germany</a></li>
+                            <li><a class="navbar-link">My Workplace</a></li>
+                            <li><a class="navbar-link">Car</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="navbar__right-menu">
+                        <li><a class="navbar-link" id="login-btn" href="/login">Log in</a></li>
+                        <li><a class="navbar-link logout-btn" id="register-btn" href="/register">Sign up</a></li>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
     <div id="app-container">
-      <div class="drawer" id="navbarToggleExternalContent">
-        <div class="drawer__container">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0"">
-            <li class="nav-item">
-              <a class="navbar-link" aria-current="page" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-link" href="/fresh-memes">Trending</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-link" href="/create-meme">Create</a>
-            </li>
-          </ul>
+        <div class="drawer" id="navbarToggleExternalContent">
+            <div class="drawer__container">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="navbar-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="/fresh-memes">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="/create-meme">Create</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div id="page">
-        <div id="page-content"></div>
-        <div id="sidebar">Sidebar</div>
-      </div>
+        <div id="page">
+            <div id="page-content"></div>
+            <div id="sidebar">Sidebar</div>
+        </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-  </body>
+</body>
+
 </html>
