@@ -1,4 +1,5 @@
 /* eslint-disable no-alert */
+import routes from '../../routes.js';
 import userData from '../data/userData.js';
 
 async function registerUser(e) {
@@ -23,9 +24,9 @@ async function registerUser(e) {
     $('#login-btn').text(`Hello, ${firstName}`);
     $('#register-btn').text('Logout');
     $('.modal-backdrop').hide();
-    page.redirect('/');
+    page.redirect(routes.fresh);
   } catch (err) {
-    page.redirect('/register');
+    page.redirect(routes.register);
     alert(err.message);
   }
 }

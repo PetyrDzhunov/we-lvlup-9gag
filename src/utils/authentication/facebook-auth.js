@@ -1,3 +1,4 @@
+import routes from '../../routes.js';
 import userData from '../data/userData.js';
 
 const provider = new firebase.auth.FacebookAuthProvider();
@@ -16,7 +17,7 @@ const addEventHandlerToFacebookBtn = () => {
 					$('#login-btn').text(`Hello, ${email.split('@')[0]}`);
 					$('#register-btn').text('Logout');
 					$('.modal-backdrop').hide();
-					page.redirect('/');
+					page.redirect(routes.fresh);
 				})
 				.catch((error) => {
 					alert(error.message);
