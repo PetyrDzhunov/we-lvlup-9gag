@@ -30,7 +30,10 @@ export default function modalTemplate(
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <button type="button" class="btn btn-primary" id="google-btn">
+            <button type="button" class="btn btn-primary m-2" id="fb-btn">
+              Login with Facebook
+            </button>
+            <button type="button" class="btn btn-primary m-2" id="google-btn">
               Login with Google
             </button>
             <div class="modal-body d-flex flex-column">

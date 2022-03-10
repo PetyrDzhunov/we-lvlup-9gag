@@ -1,6 +1,6 @@
 import userData from '../data/userData.js';
 
-export default (function attachLogout() {
+(function attachLogout() {
   $(document).ready(function () {
     $('.logout-btn').click(async function () {
       userData.clearUserData();
@@ -9,4 +9,4 @@ export default (function attachLogout() {
       $('#login-btn').text('Log in');
     });
   });
-})();
+}());
