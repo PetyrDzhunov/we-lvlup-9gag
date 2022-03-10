@@ -4,6 +4,7 @@ import userData from '../data/userData.js';
 async function registerUser(e) {
   e.preventDefault();
   const formData = new FormData(e.target);
+  const fullName = formData.get('full-name').trim();
   const emailInput = formData.get('email').trim();
   const passwordInput = formData.get('password').trim();
 
@@ -16,9 +17,10 @@ async function registerUser(e) {
       emailInput,
       passwordInput,
     );
-    const { email } = userCredential.user;
-    userData.setUserData(email);
-    $('#login-btn').text(`Hello ${email}`);
+    const { email, uid } = userCredential.user;
+    let firstName = fullName.split(' ')[0];
+    userData.setUserData({ email, uid });
+    $('#login-btn').text(`Hello, ${firstName}`);
     $('#register-btn').text('Logout');
     $('.modal-backdrop').hide();
     page.redirect('/');
