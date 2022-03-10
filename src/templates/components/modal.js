@@ -1,4 +1,5 @@
 /* eslint-disable indent */
+import attachGoogleLoginToBtn from '../../utils/authentication/google-auth.js';
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 const focusModal = () => {
@@ -6,6 +7,8 @@ const focusModal = () => {
     $(email).focus();
   });
 };
+
+
 
 export default function modalTemplate(
   authenticate,
@@ -30,10 +33,11 @@ export default function modalTemplate(
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
+            <button type="button" class="btn btn-primary" id="google-btn">Login with Google</button>
             <div class="modal-body d-flex flex-column">
               ${requiresFullName
-    ? html`<input name="full-name" class="m-2" id="full-name" type="$1" placeholder="Full name" />`
-    : null}
+                ? html`<input name="full-name" class="m-2" id="full-name" type="$1" placeholder="Full name" />`
+                : null}
               <input type="email" class="m-2" id="email" placeholder="Email adress" name="email" />
               <input class="m-2" id="password" type="password" placeholder="Password" name="password" />
             </div>
@@ -50,5 +54,6 @@ export default function modalTemplate(
       </div>
     </form>
     ${focusModal()}
+    ${attachGoogleLoginToBtn()}
   `;
 }
