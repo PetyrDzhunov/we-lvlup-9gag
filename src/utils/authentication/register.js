@@ -18,7 +18,7 @@ async function registerUser(e) {
       passwordInput,
     );
     const { email, uid } = userCredential.user;
-    let firstName = fullName.split(' ')[0];
+    const firstName = fullName.split(' ')[0];
     userData.setUserData({ email, uid });
     $('#login-btn').text(`Hello, ${firstName}`);
     $('#register-btn').text('Logout');
