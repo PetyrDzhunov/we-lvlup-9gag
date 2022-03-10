@@ -1,4 +1,3 @@
-import routes from '../../routes.js';
 import userData from '../data/userData.js';
 
 (function attachLogout() {
@@ -8,7 +7,6 @@ import userData from '../data/userData.js';
       await auth.signOut();
       $('.logout-btn').text('Sign up');
       $('#login-btn').text('Log in');
-      page.redirect(routes.fresh)
     });
   });
 }());
