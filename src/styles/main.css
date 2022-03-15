@@ -391,10 +391,19 @@ a {
   .btn-collapse-togglerspan {
     font-size: 1.25em; }
 
+.signUp-btn {
+  background-color: #0077ff;
+  color: #ffffff !important;
+  padding: 8px 16px !important;
+  margin-left: 12px;
+  border-radius: 18px;
+  font-weight: 700; }
+
 .navbar-link {
   color: #000000;
   padding: 0 8px;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
 
 .navbar-header {
   background-color: #fff;
@@ -414,6 +423,18 @@ a {
 .navbar__right-menu {
   display: flex;
   flex-flow: row wrap; }
+  .navbar__right-menu-icons {
+    margin-right: 20px; }
+    .navbar__right-menu-icons i {
+      margin: 4px;
+      color: gray; }
+
+#login-btn {
+  color: gray; }
+
+.menu-arrow {
+  color: gray;
+  margin-left: 20px; }
 
 #app-container {
   display: flex;
@@ -507,8 +528,6 @@ a {
     padding: 10px 12px;
     border-radius: 20px;
     min-width: 150px; }
-  .signUpcard--right {
-    margin-right: 40px !important; }
 
 .test {
   background-color: red; }

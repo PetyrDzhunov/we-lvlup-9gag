@@ -1,17 +1,23 @@
-.btn {
+.btn-collapse-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: $box-shadow-normal 0.15s ease-in-out;
+    color: $common-black;
+    margin-right: 8px;
+    &span {
+        font-size: 1.25em;
+    }
 }
 
-.btn-collapse-toggler {
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  transition: $box-shadow-normal 0.15s ease-in-out;
-  color: $common-black;
-  margin-right: 8px;
-  &span {
-    font-size: 1.25em;
-  }
+.signUp-btn {
+    background-color: $primary;
+    color: $common-white !important;
+    padding: 8px 16px !important;
+    margin-left: 12px;
+    border-radius: 18px;
+    font-weight: 700;
 }
