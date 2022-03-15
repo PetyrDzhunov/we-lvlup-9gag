@@ -38,6 +38,7 @@
         ]
       }
     ],
-    "wrap-iife": "off"
+    "wrap-iife": "off",
+    "allowIndentationTabs": false
   }
 }

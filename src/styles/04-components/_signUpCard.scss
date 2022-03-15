@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    margin: 20px 0;
+    text-align: center;
+    width: $drawer-width;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 5;
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__header {
+        padding-top: 20px;
+    }
+    &__text {
+        font-size: 1.05em;
+    }
+    &__button {
+        background-color: $primary;
+        color: $common-white;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 12px;
+        border-radius: 20px;
+        min-width: 150px;
+    }
+}
