@@ -7,11 +7,16 @@ const singleGiphy = (giphy) => html`
     <div class="card-body">
       <h5 class="card-title">${giphy.title}</h5>
     </div>
-    <img class="card-img-top" src=${giphy.images.downsized_large.url} alt="Card image cap" />
+    <img
+      class="card-img-top"
+      src=${giphy.images.downsized_large.url}
+      alt="Card image cap"
+    />
   </div>
 `;
 
 export default function freshMemeTemplate(fiftyGifs) {
+  console.log(fiftyGifs);
   return html`
     <section>${fiftyGifs.map(singleGiphy)}</section>
     ${freshjQueryFunction()}

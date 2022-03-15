@@ -74,12 +74,13 @@
       </div>
     </header>
     <div id="app-container">
-      <div class="card">
-        <h5 class="card__header">New to 9GAG?</h5>
-        <p class="card__text">Sign up now to see more content!</p>
-        <button class="card__button">Sign up</button>
-      </div>
+          <div class="signUpcard">
+            <h5 class="signUpcard__header">New to 9GAG?</h5>
+            <p class="signUpcard__text">Sign up now to see more content!</p>
+            <button class="signUpcard__button">Sign up</button>
+          </div>
       <div class="drawer" id="navbarToggleExternalContent">
+      
         <div class="drawer__container">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <h7 class="drawer__heading">9GAG</h7 class="drawer__heading">
@@ -95,14 +96,25 @@
                         </ul>
                     </div>
                 </div>
-                <div id="page">
+                <div id="page" class="page">
+                    <nav class="page__navbar">
+                        <ul class="page__navbar-list">
+                            <a class="page__navbar-link" href="/">Home</a>
+                            <a class="page__navbar-link" href="/fresh-memes">Trending</a>
+                            <a class="page__navbar-link">Fresh</a>
+                            <a class="page__navbar-link">Top</a>
+                            <a class="page__navbar-link">Ukraine News</a>
+                            <a class="page__navbar-link">Anime</a>
+                            <a class="page__navbar-link">Games</a>
+                        </ul>
+                    </nav>
                     <div id="page-content"></div>
-                    <div id="sidebar">
-                        <div class="card">
-                            <h5 class="card__header">New to 9GAG?</h5>
-                            <p class="card__text">Sign up now to see more content!</p>
-                            <button class="card__button">Sign up</button>
-                        </div>
+                </div>
+                <div id="sidebar">
+                    <div class="signUpcard signUpcard--right">
+                        <h5 class="signUpcard__header">New to 9GAG?</h5>
+                        <p class="signUpcard__text">Sign up now to see more content!</p>
+                        <button class="signUpcard__button">Sign up</button>
                     </div>
                 </div>
         </div>

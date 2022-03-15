@@ -1,27 +1,53 @@
 #app-container {
-  padding-top: 60px !important;
-  width: 1228px;
-  padding: 48px 16px 32px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 60px !important;
+    width: 1228px;
+    padding: 48px 16px 32px;
+    margin: 0 auto;
 }
 
 #page {
-  margin-left: $drawer-width + 16 !important;
-  width: 972px;
-  padding-top: 16px;
-  margin: 0 auto 32px;
+    margin-left: $drawer-width + 16 !important;
+    width: 972px;
+    margin: auto 32px;
+    margin-top: 20px;
+}
+
+.page {
+    &__navbar {
+        display: flex;
+        flex-direction: row;
+        &-list {
+            display: flex;
+            flex-flow: row;
+        }
+        &-link {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 36px;
+            margin-right: 8px;
+            color: $text-color;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: center;
+            white-space: nowrap;
+            line-height: 36px;
+            border-radius: 16px;
+            padding: 8px 16px;
+            font-weight: bolder;
+        }
+    }
 }
 
 #page-content {
-  float: left;
-  width: 640px;
+    width: 640px;
 }
 
 #sidebar {
-  float: right;
-  padding: 0 2px 30px;
-  width: 300px;
-  position: relative;
-  border-left: 1px solid black;
-  height: calc(100% - 60px);
+    width: 300px;
+    position: relative;
+    height: calc(100% - 60px);
+    margin-left: 30px;
 }

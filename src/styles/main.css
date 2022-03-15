@@ -416,6 +416,9 @@ a {
   flex-flow: row wrap; }
 
 #app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding-top: 60px !important;
   width: 1228px;
   padding: 48px 16px 32px;
@@ -424,20 +427,38 @@ a {
 #page {
   margin-left: 256px !important;
   width: 972px;
-  padding-top: 16px;
-  margin: 0 auto 32px; }
+  margin: auto 32px;
+  margin-top: 20px; }
+
+.page__navbar {
+  display: flex;
+  flex-direction: row; }
+  .page__navbar-list {
+    display: flex;
+    flex-flow: row; }
+  .page__navbar-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    margin-right: 8px;
+    color: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    white-space: nowrap;
+    line-height: 36px;
+    border-radius: 16px;
+    padding: 8px 16px;
+    font-weight: bolder; }
 
 #page-content {
-  float: left;
   width: 640px; }
 
 #sidebar {
-  float: right;
-  padding: 0 2px 30px;
   width: 300px;
   position: relative;
-  border-left: 1px solid black;
-  height: calc(100% - 60px); }
+  height: calc(100% - 60px);
+  margin-left: 30px; }
 
 .drawer {
   margin-top: 0;
@@ -459,23 +480,25 @@ a {
     font-weight: bolder;
     text-align: left; }
 
-.card {
+.signUpcard {
   display: flex;
   margin: 20px 0;
   text-align: center;
   width: 240px;
   border-radius: 8px;
-  position: absolute;
-  z-index: 5; }
-  .card__wrapper {
+  flex-direction: column;
+  position: fixed;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px; }
+  .signUpcard__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
-  .card__header {
+  .signUpcard__header {
     padding-top: 20px; }
-  .card__text {
+  .signUpcard__text {
     font-size: 1.05em; }
-  .card__button {
+  .signUpcard__button {
     background-color: #0077ff;
     color: #ffffff;
     margin-bottom: 20px;
@@ -484,6 +507,8 @@ a {
     padding: 10px 12px;
     border-radius: 20px;
     min-width: 150px; }
+  .signUpcard--right {
+    margin-right: 40px !important; }
 
 .test {
   background-color: red; }

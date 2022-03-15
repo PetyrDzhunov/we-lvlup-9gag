@@ -1,11 +1,13 @@
-.card {
+.signUpcard {
     display: flex;
     margin: 20px 0;
     text-align: center;
     width: $drawer-width;
     border-radius: 8px;
-    position: absolute;
-    z-index: 5;
+    flex-direction: column;
+    position: fixed;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
     &__wrapper {
         display: flex;
         flex-direction: row;
@@ -26,5 +28,8 @@
         padding: 10px 12px;
         border-radius: 20px;
         min-width: 150px;
+    }
+    &--right {
+        margin-right: 40px !important;
     }
 }
