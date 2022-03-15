@@ -1,5 +1,3 @@
-import freshjQueryFunction from '../utils/dom/freshjQuery.js';
-
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 const singleGiphy = (giphy) => html`
@@ -16,9 +14,11 @@ const singleGiphy = (giphy) => html`
 `;
 
 export default function freshMemeTemplate(fiftyGifs) {
-  console.log(fiftyGifs);
   return html`
-    <section>${fiftyGifs.map(singleGiphy)}</section>
-    ${freshjQueryFunction()}
+    <section>
+      ${fiftyGifs
+        .sort((a, b) => a.title.localeCompare(b.title))
+        .map(singleGiphy)}
+    </section>
   `;
 }
