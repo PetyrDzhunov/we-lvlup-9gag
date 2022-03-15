@@ -9,4 +9,4 @@ import userData from '../data/userData.js';
       $('#login-btn').text('Log in');
     });
   });
-}());
+})();

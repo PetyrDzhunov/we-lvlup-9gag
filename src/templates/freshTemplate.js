@@ -14,11 +14,5 @@ const singleGiphy = (giphy) => html`
 `;
 
 export default function freshMemeTemplate(fiftyGifs) {
-  return html`
-    <section>
-      ${fiftyGifs
-        .sort((a, b) => a.title.localeCompare(b.title))
-        .map(singleGiphy)}
-    </section>
-  `;
+  return html` <section>${fiftyGifs.map(singleGiphy)}</section> `;
 }

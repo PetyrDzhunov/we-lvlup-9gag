@@ -39,6 +39,6 @@
       }
     ],
     "wrap-iife": "off",
-    "allowIndentationTabs": false
+    "allowIndentationTabs": "off"
   }
 }

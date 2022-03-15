@@ -1,32 +1,32 @@
 .signUpcard {
+  display: flex;
+  margin: 20px 0;
+  text-align: center;
+  width: $drawer-width;
+  border-radius: 8px;
+  flex-direction: column;
+  position: fixed;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  &__wrapper {
     display: flex;
-    margin: 20px 0;
-    text-align: center;
-    width: $drawer-width;
-    border-radius: 8px;
-    flex-direction: column;
-    position: fixed;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__header {
+    padding-top: 20px;
+  }
+  &__text {
+    font-size: 1.05em;
+  }
+  &__button {
+    background-color: $primary;
+    color: $common-white;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 12px;
     border-radius: 20px;
-    &__wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    &__header {
-        padding-top: 20px;
-    }
-    &__text {
-        font-size: 1.05em;
-    }
-    &__button {
-        background-color: $primary;
-        color: $common-white;
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10px 12px;
-        border-radius: 20px;
-        min-width: 150px;
-    }
+    min-width: 150px;
+  }
 }

@@ -60,9 +60,8 @@ export default function modalTemplate(
               ${requiresFullName
                 ? html`<input
                     name="full-name"
-                    class="m-2"
+                    class="modal-input m-2"
                     id="full-name"
-                    type="$1"
                     placeholder="Full name"
                   />`
                 : null}
