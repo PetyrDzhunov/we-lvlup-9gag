@@ -1,0 +1,57 @@
+.modal__btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid $text-light;
+    justify-items: center;
+    border-radius: 24px;
+    padding: 14px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    background-color: $common-white;
+    i {
+        color: $primary;
+        flex: 0.5;
+    }
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.modal__social-button__list {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.modal-content {
+    p {
+        text-align: center;
+        font-weight: bolder;
+    }
+}
+
+.modal__text {
+    margin-top: 10px;
+}
+
+.modal__submit-btn {
+    background-color: $primary;
+    color: $common-white;
+    padding: 8px 24px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.modal-input {
+    color: $text-color;
+    border-radius: 8px;
+    height: 40px;
+}
