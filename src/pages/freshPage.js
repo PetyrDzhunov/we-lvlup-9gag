@@ -1,8 +1,8 @@
 import freshMemeTemplate from '../templates/freshTemplate.js';
-import getNextGiphies from '../utils/fetch/getNextGiphies.js';
-// import getTenGiphies from '../utils/fetch/trending.js';
+import getTenGiphies from '../utils/fetch/getNextGiphies.js';
+import '../utils/fetch/infiniteScroll.js';
 
 export default async function freshPage(ctx) {
-  const tenGiphies = await getNextGiphies();
+  const tenGiphies = await getTenGiphies();
   ctx.render(freshMemeTemplate(tenGiphies));
 }

@@ -13,6 +13,6 @@ const singleGiphy = (giphy) => html`
   </div>
 `;
 
-export default function freshMemeTemplate(fiftyGifs) {
-  return html` <section>${fiftyGifs.map(singleGiphy)}</section> `;
+export default function freshMemeTemplate(tenGiphies) {
+  return html` ${tenGiphies.map(singleGiphy)} `;
 }

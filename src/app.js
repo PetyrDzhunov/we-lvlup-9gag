@@ -6,7 +6,6 @@ import registerPage from './pages/registerPage.js';
 import loginPage from './pages/loginPage.js';
 import detailsPage from './pages/detailsPage.js';
 import routes from './routes.js';
-import './utils/fetch/infiniteScroll.js';
 
 page(decorateContext);
 page(routes.home, homePage);

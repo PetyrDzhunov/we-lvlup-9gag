@@ -1,32 +1,55 @@
 import { giphyAPIkey } from '../../constants.js';
 
-$(window).scroll(function () {
-  if ($(document).height() - $(this).height() - 100 < $(this).scrollTop()) {
+$(document).ready(() => {
+  let offset = 0;
+  // initial value for offset
+  let offsetVal = 0;
+  // set your limit
+  const giphyLimit = 10;
+
+  function getGiphy(i) {
+    // if offset is greater than one then fetch further items prior to previous ones
+    if (i > 0) {
+      // increase the offset with item limit like 25, 50 to get the next items
+      offsetVal = giphyLimit * i;
+    }
     $.ajax({
+      url: 'https://api.giphy.com/v1/gifs/trending?',
       type: 'GET',
-      url: `https://api.giphy.com/v1/gifs/trending?api_key=${giphyAPIkey}&offset=10`,
-      contentType: 'application/json; charset=utf-8',
-      data: '',
       dataType: 'json',
-      success: ({ data }) => {
-        if (data) {
-          data.forEach((giphy) => {
-            $('#page').append(`<div class="card m-2" style="width: 40rem;">
-<div class="card-body">
-      <h5 class="card-title">${giphy.title}</h5>  
-</div>
-    <img
-      class="card-img-top"
-     src=${giphy.images.downsized_large.url}
-      alt="Card image cap"
-    />
-  </div>`);
-          });
-        }
+      data: {
+        q: 'keyword',
+        api_key: giphyAPIkey,
+        limit: giphyLimit,
+        offset: offsetVal,
       },
-      error: (req, status, error) => {
-        alert(status, error);
+      success: (data) => {
+        console.log(data.pagination);
+        $.each(data.data, (index, giphy) => {
+          const imageUrl = giphy.images.downsized_large.url;
+          $('#page').append(`
+         <div class="card m-2" style="width: 40rem;">
+            <div class="card-body">
+                <h5 class="card-title">${giphy.title}</h5>
+             </div>
+           <img class="card-img-top" src=${imageUrl} alt="Giphy image"/>
+         </div>`);
+        });
+        // increase offset to get further items.
+        offset += 1;
+      },
+      error: (err) => {
+        console.log(err);
       },
     });
   }
+  getGiphy(0);
+
+  $(window).scroll(function () {
+    // when scroll reaches to bottom.
+    if ($(document).height() - $(this).height() - 100 < $(this).scrollTop()) {
+      console.log('here');
+      getGiphy(offset);
+    }
+  });
 });

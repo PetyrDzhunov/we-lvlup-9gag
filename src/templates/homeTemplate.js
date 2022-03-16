@@ -14,5 +14,5 @@ const singleGiphy = (giphy) => html`
 `;
 
 export default function homeTemplate(mostLikedGiphies) {
-  return html` <section>${mostLikedGiphies.map(singleGiphy)}</section> `;
+  return html` ${mostLikedGiphies.map(singleGiphy)}`;
 }
