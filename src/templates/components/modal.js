@@ -15,6 +15,7 @@ export default function modalTemplate(
 ) {
   return html`
     <button
+      id="authenticate-btn"
       type="button"
       class="btn btn-primary d-flex justify-content-center"
       data-bs-toggle="modal"
