@@ -2,7 +2,7 @@ import { giphyAPIkey } from '../../constants.js';
 
 if (
   window.location.pathname === '/' ||
-  window.location.pathname === '/trending'
+  window.location.pathname === '/fresh-memes'
 ) {
   $(document).ready(() => {
     let offset = 0;
@@ -28,6 +28,7 @@ if (
           offset: offsetVal,
         },
         success: (data) => {
+          console.log(offset);
           console.log(data.pagination);
           $.each(data.data, (index, giphy) => {
             const imageUrl = giphy.images.downsized_large.url;
