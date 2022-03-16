@@ -9,11 +9,11 @@ const root = document.getElementById('page-content');
 export function updateUserNav() {
   const user = userData.getUserData();
   if (user) {
-    document.querySelector('.user').style.display = 'inline-block';
-    document.querySelector('.guest').style.display = 'none';
+    $('.user').show();
+    $('.guest').hide();
   } else {
-    document.querySelector('.user').style.display = 'none';
-    document.querySelector('.guest').style.display = 'inline-block';
+    $('.user').hide();
+    $('.guest').show();
   }
 }
 
