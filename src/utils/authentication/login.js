@@ -19,9 +19,8 @@ async function loginUser(e) {
     );
     const { email, uid } = userCredential.user;
     userData.setUserData({ email, uid });
-    $('#login-btn').text(`Hello ${email}`);
+    $('#welcome-btn').text(`Hello, ${email.split('@')[0]}`);
     $('.modal-backdrop').hide();
-    console.log('here');
     updateUserNav();
     page.redirect(routes.fresh);
   } catch (err) {

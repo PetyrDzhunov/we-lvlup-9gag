@@ -5,7 +5,6 @@ if (
   window.location.pathname === '/fresh-memes'
 ) {
   $(document).ready(() => {
-    console.log(window.location.pathname);
     let offset = 0;
     // initial value for offset
     let offsetVal = 0;
