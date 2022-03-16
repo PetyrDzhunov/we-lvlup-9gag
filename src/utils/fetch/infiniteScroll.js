@@ -45,11 +45,27 @@ $(document).ready(() => {
   }
   getGiphy(0);
 
+  let paginate = true;
+
+  const paginateToggle = function () {
+    paginate = true;
+  };
+
   $(window).scroll(function () {
     // when scroll reaches to bottom.
-    if ($(document).height() - $(this).height() - 100 < $(this).scrollTop()) {
-      console.log('here');
-      getGiphy(offset);
+    if (
+      $(window).scrollTop() >=
+      $(document).height() - $(window).height() - 1500
+    ) {
+      if (paginate) {
+        paginate = false;
+        console.log('pagination');
+        getGiphy(offset);
+        setTimeout(paginateToggle, 1000);
+      } else {
+        console.log('only one pagination allowed per scroll down');
+        return;
+      }
     }
   });
 });
