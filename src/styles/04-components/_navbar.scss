@@ -1,38 +1,50 @@
 .navbar-header {
-  background-color: #fff;
-  min-width: 100%;
-  position: fixed;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  height: 60px;
+    background-color: #fff;
+    min-width: 100%;
+    position: fixed;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    height: 60px;
 }
 
 .navbar {
-  background-color: inherit !important;
+    background-color: inherit !important;
 }
 
 .nav-wrap {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0 6px;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 6px;
 }
 
 .navbar__right-menu {
-  display: flex;
-  flex-flow: row wrap;
-  &-icons {
-    margin-right: 20px;
-    i {
-      margin: 4px;
-      color: gray;
+    display: flex;
+    flex-flow: row wrap;
+    &-icons {
+        margin-right: 20px;
+        i {
+            margin: 4px;
+            color: gray;
+        }
     }
-  }
 }
 
 #login-btn {
-  color: gray;
+    color: gray;
 }
 
 .menu-arrow {
-  color: gray;
-  margin-left: 20px;
+    color: gray;
+    margin-left: 20px;
+}
+
+.guest,
+.user {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.guest {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }

@@ -16,7 +16,7 @@ export default function modalTemplate(
   return html`
     <button
       type="button"
-      class="btn btn-primary"
+      class="btn btn-primary d-flex justify-content-center"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >

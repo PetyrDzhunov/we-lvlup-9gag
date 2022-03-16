@@ -54,8 +54,8 @@ $(document).ready(() => {
   $(window).scroll(function () {
     // when scroll reaches to bottom.
     if (
-      $(window).scrollTop() >=
-      $(document).height() - $(window).height() - 1500
+      $(window).scrollTop()
+      >= $(document).height() - $(window).height() - 1500
     ) {
       if (paginate) {
         paginate = false;
@@ -64,7 +64,6 @@ $(document).ready(() => {
         setTimeout(paginateToggle, 1000);
       } else {
         console.log('only one pagination allowed per scroll down');
-        return;
       }
     }
   });

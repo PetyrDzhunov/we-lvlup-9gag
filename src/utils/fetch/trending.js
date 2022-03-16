@@ -3,10 +3,10 @@ import { giphyAPIkey } from '../../constants.js';
 
 export default async function getTenGiphies() {
   try {
-    const fiftyGiphies = await request(
+    const tenGiphies = await request(
       `https://api.giphy.com/v1/gifs/trending?api_key=${giphyAPIkey}&limit=10`,
     );
-    return fiftyGiphies.data;
+    return tenGiphies.data;
   } catch (err) {
     return err;
   }

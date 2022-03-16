@@ -1,4 +1,6 @@
-import decorateContext from './middlewares/decorateContext.js';
+import decorateContext, {
+  updateUserNav,
+} from './middlewares/decorateContext.js';
 import homePage from './pages/homePage.js';
 import freshPage from './pages/freshPage.js';
 import createPage from './pages/createPage.js';
@@ -15,4 +17,5 @@ page(routes.register, registerPage);
 page(routes.login, loginPage);
 page('/details/:id', detailsPage);
 
+updateUserNav();
 page.start();

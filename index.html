@@ -59,17 +59,29 @@
                         </ul>
                     </div>
                     <div class="navbar__right-menu">
+
                         <div class="navbar__right-menu-icons">
                             <i class="bi bi-search"></i>
                             <i class="bi bi-chat-right-fill"></i>
                         </div>
-                        <li>
-                            <a class="navbar-link" id="login-btn" href="/login">Log in</a>
-                        </li>
-                        <li>
-                            <a class="navbar-link logout-btn signUp-btn" id="register-btn" href="/register">Sign up</a>
-                            <i class="menu-arrow bi bi-chevron-compact-down"></i>
-                        </li>
+
+                        <div class="guest">
+                            <li>
+                                <a class="navbar-link" id="login-btn" href="/login">Log in</a>
+                            </li>
+                            <li>
+                                <a class="navbar-link signUp-btn" id="register-btn" href="/register">Sign up</a>
+                                <i class="menu-arrow bi bi-chevron-compact-down"></i>
+                            </li>
+                        </div>
+
+                        <div class="user">
+                            <li>
+                                <a class="navbar-link logout-btn signUp-btn" href="javascript:void(0)">Logout</a>
+                                <i class="menu-arrow bi bi-chevron-compact-down"></i>
+                            </li>
+                        </div>
+
                     </div>
                 </div>
             </nav>
@@ -86,15 +98,20 @@
             <div class="drawer__container">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <h7 class="drawer__heading">9GAG</h7 class="drawer__heading">
+
+                    <div class="user">
+                        <li class="nav-item">
+                            <a class="navbar-link" href="/create-meme">Create</a>
+                        </li>
+                    </div>
+
                     <li class="nav-item">
                         <a class="navbar-link" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="navbar-link" href="/fresh-memes">Trending</a>
+                        <a class="navbar-link" id="guest" href="/fresh-memes">Trending</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="navbar-link" href="/create-meme">Create</a>
-                    </li>
+
                 </ul>
             </div>
         </div>

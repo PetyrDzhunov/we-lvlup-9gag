@@ -1,5 +1,6 @@
 import routes from '../../routes.js';
 import userData from '../data/userData.js';
+import { updateUserNav } from '../../middlewares/decorateContext.js';
 
 async function loginUser(e) {
   e.preventDefault();
@@ -19,8 +20,9 @@ async function loginUser(e) {
     const { email, uid } = userCredential.user;
     userData.setUserData({ email, uid });
     $('#login-btn').text(`Hello ${email}`);
-    $('#register-btn').text('Logout');
     $('.modal-backdrop').hide();
+    console.log('here');
+    updateUserNav();
     page.redirect(routes.fresh);
   } catch (err) {
     page.redirect(routes.login);

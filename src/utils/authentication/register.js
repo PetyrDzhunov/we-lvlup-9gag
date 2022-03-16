@@ -1,6 +1,7 @@
 /* eslint-disable no-alert */
 import routes from '../../routes.js';
 import userData from '../data/userData.js';
+import { updateUserNav } from '../../middlewares/decorateContext.js';
 
 async function registerUser(e) {
   e.preventDefault();
@@ -22,8 +23,8 @@ async function registerUser(e) {
     const firstName = fullName.split(' ')[0];
     userData.setUserData({ email, uid });
     $('#login-btn').text(`Hello, ${firstName}`);
-    $('#register-btn').text('Logout');
     $('.modal-backdrop').hide();
+    updateUserNav();
     page.redirect(routes.fresh);
   } catch (err) {
     page.redirect(routes.register);

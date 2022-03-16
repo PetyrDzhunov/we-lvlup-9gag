@@ -3,10 +3,10 @@ import { giphyAPIkey } from '../../constants.js';
 
 export default async function getMostLiked() {
   try {
-    const randomGiphies = await request(
-      `https://api.giphy.com/v1/gifs/trending?api_key=${giphyAPIkey}`,
+    const mostLikedGiphies = await request(
+      `https://api.giphy.com/v1/gifs/trending?api_key=${giphyAPIkey}&limit=10`,
     );
-    return randomGiphies.data;
+    return mostLikedGiphies.data;
   } catch (err) {
     return err;
   }
