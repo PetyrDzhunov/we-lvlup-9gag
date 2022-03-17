@@ -4,7 +4,8 @@ import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 const loadFile = function (e) {
   const imagePreview = document.getElementById('image-preview');
-  imagePreview.src = URL.createObjectURL(e.target.files[0]);
+  const file = e.target.files[0];
+  imagePreview.src = URL.createObjectURL(file);
   imagePreview.style.height = '250px';
   imagePreview.style.width = '400px';
   imagePreview.onload = function () {
