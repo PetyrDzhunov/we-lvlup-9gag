@@ -12,6 +12,7 @@ export default async function createPage(ctx) {
     if (currentFormClicked === 'file-upload') {
       const res = await uploadGiphy(form);
       const gifId = res.data.id;
+      console.log(gifId);
       // attach this gifId to the current user
     }
     // create a post method with source_image_url to giphy
