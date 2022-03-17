@@ -11,9 +11,11 @@ export function updateUserNav() {
   if (user) {
     $('.user').show();
     $('.guest').hide();
+    $('.drawer').css('marginTop', '20px');
   } else {
     $('.user').hide();
     $('.guest').show();
+    $('drawer').css('marginTop', '230px');
   }
 }
 
