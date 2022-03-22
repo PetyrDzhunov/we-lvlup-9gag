@@ -593,6 +593,20 @@ a {
   border-radius: 8px;
   height: 40px; }
 
+.giphy-footer {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px auto; }
+  .giphy-footer__button {
+    font-size: 20px;
+    margin: 8px; }
+  .giphy-footer .like {
+    color: #0077ff; }
+  .giphy-footer .dislike {
+    color: #ff3b30; }
+  .giphy-footer .comment {
+    color: #000000; }
+
 .test {
   background-color: red; }
   .test__part1 {

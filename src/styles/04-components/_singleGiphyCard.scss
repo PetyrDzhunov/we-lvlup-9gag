@@ -1,0 +1,18 @@
+.giphy-footer {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px auto;
+    &__button {
+        font-size: 20px;
+        margin: 8px;
+    }
+    .like {
+        color: $primary;
+    }
+    .dislike {
+        color: $danger;
+    }
+    .comment {
+        color: $common-black;
+    }
+}

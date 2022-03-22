@@ -9,6 +9,7 @@ import userData from '../data/userData.js';
       await auth.signOut();
       $('#login-btn').text('Log in');
       updateUserNav();
+      page.redirect('/');
     });
   });
 })();
