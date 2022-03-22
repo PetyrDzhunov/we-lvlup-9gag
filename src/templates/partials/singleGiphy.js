@@ -1,3 +1,5 @@
+import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
+
 export default function singleGiphy(giphy) {
   return html`
     <div class="card m-2" style="width: 40rem;">
