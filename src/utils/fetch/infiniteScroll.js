@@ -1,8 +1,9 @@
 import { giphyAPIkey } from '../../constants.js';
+import { giphyApiEndpoints } from '../../giphyEndpoints.js';
 
 if (
-  window.location.pathname === '/'
-  || window.location.pathname === '/fresh-memes'
+  window.location.pathname === '/' ||
+  window.location.pathname === '/fresh-memes'
 ) {
   $(document).ready(() => {
     let offset = 0;
@@ -18,7 +19,7 @@ if (
         offsetVal = giphyLimit * i;
       }
       $.ajax({
-        url: 'https://api.giphy.com/v1/gifs/trending?',
+        url: giphyApiEndpoints.trending,
         type: 'GET',
         dataType: 'json',
         data: {
@@ -59,8 +60,8 @@ if (
     $(window).scroll(function () {
       // when scroll reaches to bottom.
       if (
-        $(window).scrollTop()
-        >= $(document).height() - $(window).height() - 1500
+        $(window).scrollTop() >=
+        $(document).height() - $(window).height() - 1500
       ) {
         if (paginate) {
           paginate = false;

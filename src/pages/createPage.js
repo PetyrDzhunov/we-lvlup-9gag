@@ -15,13 +15,12 @@ export default async function createPage(ctx) {
       form.append('file', file);
       const res = await uploadGiphy(form);
       await uploadUniqueGiphyWithCurrentUserToDB(user.uid, res.data.id);
-      page.redirect('/');
     } else {
       form.append('source_image_url', urlInput);
       const res = await uploadGiphy(form);
       await uploadUniqueGiphyWithCurrentUserToDB(user.uid, res.data.id);
-      page.redirect('/');
     }
+    page.redirect('/uploads');
   }
   ctx.render(createMemeTemplate(onUploadSubmit));
 }
