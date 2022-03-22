@@ -4,6 +4,7 @@ const routes = {
   create: '/create-meme',
   login: '/login',
   register: '/register',
+  uploads: '/uploads',
   details: (id) => `/details/${id}`,
 };
 

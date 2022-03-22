@@ -439,7 +439,7 @@ a {
 .guest,
 .user {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: column wrap; }
 
 .guest {
   justify-content: center;

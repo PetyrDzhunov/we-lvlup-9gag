@@ -8,6 +8,7 @@ import registerPage from './pages/registerPage.js';
 import loginPage from './pages/loginPage.js';
 import detailsPage from './pages/detailsPage.js';
 import routes from './routes.js';
+import usersUploadPage from './pages/userUploadsPage.js';
 
 page(decorateContext);
 page(routes.home, homePage);
@@ -15,6 +16,7 @@ page(routes.fresh, freshPage);
 page(routes.create, createPage);
 page(routes.register, registerPage);
 page(routes.login, loginPage);
+page(routes.uploads, usersUploadPage);
 page('/details/:id', detailsPage);
 
 updateUserNav();
