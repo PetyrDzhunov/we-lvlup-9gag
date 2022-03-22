@@ -1,7 +1,8 @@
+import { gifsRef } from '../../constants.js';
+
 export default async function (userId, giphyId) {
-  console.log(db);
   try {
-    return db.collection('gifs').add({
+    return gifsRef.add({
       creator: userId,
       gif: giphyId,
     });
