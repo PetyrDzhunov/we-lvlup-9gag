@@ -439,6 +439,9 @@ a {
 .guest,
 .user {
   display: flex;
+  flex-flow: row wrap; }
+
+.user.drawer {
   flex-flow: column wrap; }
 
 .guest {
