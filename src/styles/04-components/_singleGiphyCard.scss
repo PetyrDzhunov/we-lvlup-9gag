@@ -1,19 +1,19 @@
 .giphy-footer {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 10px auto;
-    &__icon {
-        font-size: 30px;
-        margin: 12px;
-        cursor: pointer;
-    }
-    .like {
-        color: $primary;
-    }
-    .dislike {
-        color: $danger;
-    }
-    .comment {
-        color: $common-black;
-    }
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px auto;
+  &__icon {
+    font-size: 30px;
+    margin: 12px;
+    cursor: pointer;
+  }
+  .like {
+    color: $primary;
+  }
+  .dislike {
+    color: $danger;
+  }
+  .comment {
+    color: $common-black;
+  }
 }
