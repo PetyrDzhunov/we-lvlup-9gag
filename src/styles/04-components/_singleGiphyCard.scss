@@ -2,9 +2,10 @@
     display: flex;
     flex-flow: row wrap;
     margin: 10px auto;
-    &__button {
-        font-size: 20px;
-        margin: 8px;
+    &__icon {
+        font-size: 30px;
+        margin: 12px;
+        cursor: pointer;
     }
     .like {
         color: $primary;

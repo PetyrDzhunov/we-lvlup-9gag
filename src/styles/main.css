@@ -597,9 +597,10 @@ a {
   display: flex;
   flex-flow: row wrap;
   margin: 10px auto; }
-  .giphy-footer__button {
-    font-size: 20px;
-    margin: 8px; }
+  .giphy-footer__icon {
+    font-size: 30px;
+    margin: 12px;
+    cursor: pointer; }
   .giphy-footer .like {
     color: #0077ff; }
   .giphy-footer .dislike {

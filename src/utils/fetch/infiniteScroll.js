@@ -1,10 +1,9 @@
+import likeGiphy from './likeGiphy.js';
 import { giphyAPIkey } from '../../constants.js';
 import { giphyApiEndpoints } from '../../giphyEndpoints.js';
 
 let offset = 0;
-// initial value for offset
 let offsetVal = 0;
-// set your limit
 const giphyLimit = 10;
 
 function getGiphy(i) {
@@ -27,21 +26,15 @@ function getGiphy(i) {
       $.each(data.data, (index, giphy) => {
         const imageUrl = giphy.images.downsized_large.url;
         $('#page').append(`
-         <div class="card m-2" style="width: 40rem;">
+         <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">
             <div class="card-body">
                 <h5 class="card-title">${giphy.title}</h5>
              </div>
            <img class="card-img-top" src=${imageUrl} alt="Giphy image"/>
 <footer class="giphy-footer">
-        <button class="giphy-footer__button">
-          <i class="like bi bi-hand-thumbs-up"></i>
-        </button>
-        <button class="giphy-footer__button">
-          <i class="dislike bi bi-hand-thumbs-down"></i>
-        </button>
-        <button class="giphy-footer__button">
-          <i class="comment bi bi-chat-left-fill"></i>
-        </button>
+          <i @click=${likeGiphy} class="giphy-footer__icon like bi bi-hand-thumbs-up"></i>
+          <i class="giphy-footer__icon dislike bi bi-hand-thumbs-down"></i>
+          <i class="giphy-footer__icon comment bi bi-chat-left-fill"></i>
       </footer>
          </div>`);
       });
@@ -60,8 +53,7 @@ const paginateToggle = function () {
   paginate = true;
 };
 
-$(window).scroll(function () {
-  // when scroll reaches to bottom.
+function windowScrollHandler() {
   if (
     $(window).scrollTop() >=
     $(document).height() - $(window).height() - 1500
@@ -75,4 +67,12 @@ $(window).scroll(function () {
       console.log('only one pagination allowed per scroll down');
     }
   }
-});
+}
+
+export function attachInfiniteScrollHandler() {
+  $(window).scroll(windowScrollHandler);
+}
+
+export function detachInfiniteScrollHandler() {
+  $(window).off('scroll', windowScrollHandler);
+}
