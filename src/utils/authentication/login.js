@@ -21,7 +21,9 @@ async function loginUser(e) {
     userData.setUserData({ email, uid });
     $('#welcome-btn').text(`Hello, ${email.split('@')[0]}`);
     $('.modal-backdrop').hide();
+    $('.modal-open').css('overflow', 'scroll');
     updateUserNav();
+
     page.redirect(routes.fresh);
   } catch (err) {
     page.redirect(routes.login);

@@ -25,7 +25,7 @@ function getGiphy(i) {
       console.log(data.pagination);
       $.each(data.data, (index, giphy) => {
         const imageUrl = giphy.images.downsized_large.url;
-        $('#page').append(`
+        $('#infinite-scroll-content').append(`
          <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">
             <div class="card-body">
                 <h5 class="card-title">${giphy.title}</h5>
@@ -75,4 +75,5 @@ export function attachInfiniteScrollHandler() {
 
 export function detachInfiniteScrollHandler() {
   $(window).off('scroll', windowScrollHandler);
+  $('#infinite-scroll-content').empty();
 }
