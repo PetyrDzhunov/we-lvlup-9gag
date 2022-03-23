@@ -11,9 +11,16 @@ export default async function likeGiphy(e) {
 
   const currentGiphyId = e.target.parentElement.parentElement.dataset.id;
 
-  // add this giphy into firebase with an ID and attach to it likes as an array and put the current user id in there
   await addGiphyLikeToFirebase(user.uid, currentGiphyId);
 
+  const currentLikeBtn = e.target;
+
   isLiked = true;
+
+  if (isLiked) {
+    $(currentLikeBtn)
+      .removeClass('bi bi-hand-thumbs-up')
+      .addClass('bi bi-hand-thumbs-up-fill');
+  }
   // after that I can use the length of the array to show how many likes this giphy has
 }
