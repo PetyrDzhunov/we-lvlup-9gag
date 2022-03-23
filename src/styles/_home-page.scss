@@ -1,7 +1,8 @@
-.test {
-  background-color: red;
+.category-image {
+    width: 20px;
+    height: 20px;
+}
 
-  &__part1 {
-    background-color: blue;
-  }
+.drawer__container {
+    overflow: scroll;
 }

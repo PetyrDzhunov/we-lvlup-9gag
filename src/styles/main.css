@@ -607,7 +607,9 @@ a {
   .giphy-footer .comment {
     color: #000000; }
 
-.test {
-  background-color: red; }
-  .test__part1 {
-    background-color: blue; }
+.category-image {
+  width: 20px;
+  height: 20px; }
+
+.drawer__container {
+  overflow: scroll; }

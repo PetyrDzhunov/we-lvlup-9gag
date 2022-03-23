@@ -8,9 +8,7 @@ let offsetVal = 0;
 const giphyLimit = 10;
 
 function getGiphy(i) {
-  // if offset is greater than one then fetch further items prior to previous ones
   if (i > 0) {
-    // increase the offset with item limit like 25, 50 to get the next items
     offsetVal = giphyLimit * i;
   }
   $.ajax({
@@ -28,15 +26,25 @@ function getGiphy(i) {
       console.log(data.pagination);
       $.each(data.data, (index, giphy) => {
         const imageUrl = giphy.images.downsized_large.url;
-        $('#page-content').append(`
+        $('#page').append(`
          <div class="card m-2" style="width: 40rem;">
             <div class="card-body">
                 <h5 class="card-title">${giphy.title}</h5>
              </div>
            <img class="card-img-top" src=${imageUrl} alt="Giphy image"/>
+<footer class="giphy-footer">
+        <button class="giphy-footer__button">
+          <i class="like bi bi-hand-thumbs-up"></i>
+        </button>
+        <button class="giphy-footer__button">
+          <i class="dislike bi bi-hand-thumbs-down"></i>
+        </button>
+        <button class="giphy-footer__button">
+          <i class="comment bi bi-chat-left-fill"></i>
+        </button>
+      </footer>
          </div>`);
       });
-      // increase offset to get further items.
       offset += 1;
     },
     error: (err) => {

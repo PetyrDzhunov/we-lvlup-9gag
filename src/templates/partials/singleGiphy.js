@@ -1,3 +1,4 @@
+import likeGiphy from '../../utils/fetch/likeGiphy.js';
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 export default function singleGiphy(giphy) {
@@ -12,7 +13,7 @@ export default function singleGiphy(giphy) {
         alt="Card image cap"
       />
       <footer class="giphy-footer">
-        <button class="giphy-footer__button">
+        <button @click=${likeGiphy} class="giphy-footer__button">
           <i class="like bi bi-hand-thumbs-up"></i>
         </button>
         <button class="giphy-footer__button">
