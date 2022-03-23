@@ -48,10 +48,8 @@ const pathsThatRequireInfiniteScroll = ['/', '/fresh-memes'];
 export default function decorateContext(ctx, next) {
   if (pathsThatRequireInfiniteScroll.includes(ctx.path)) {
     attachInfiniteScrollHandler();
-    console.log('here attaching');
   } else {
     detachInfiniteScrollHandler();
-    console.log('here detaching');
   }
   ctx.render = (content) => render(content, root);
   ctx.updateUserNav = updateUserNav;

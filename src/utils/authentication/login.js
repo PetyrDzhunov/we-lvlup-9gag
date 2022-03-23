@@ -23,7 +23,6 @@ async function loginUser(e) {
     $('.modal-backdrop').hide();
     $('.modal-open').css('overflow', 'scroll');
     updateUserNav();
-
     page.redirect(routes.fresh);
   } catch (err) {
     page.redirect(routes.login);

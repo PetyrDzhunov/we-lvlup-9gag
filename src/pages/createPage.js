@@ -4,7 +4,6 @@ import userData from '../utils/data/userData.js';
 import uploadUniqueGiphyWithCurrentUserToDB from '../utils/fetch/uploadUniqueGiphyWithCurrentUserToDB.js';
 
 export default async function createPage(ctx) {
-  // window.removeEventListener('scroll',);
   async function onUploadSubmit(e) {
     e.preventDefault();
     const user = userData.getUserData();
