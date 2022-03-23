@@ -7,11 +7,14 @@ export default function singleGiphy(giphy) {
       <div class="card-body">
         <h5 class="card-title">${giphy.title}</h5>
       </div>
-      <img
-        class="card-img-top"
-        src=${giphy.images.downsized_large.url}
-        alt="Card image cap"
-      />
+      <a href="/details/${giphy.id}">
+        <img
+          id="single-giphy-img"
+          class="card-img-top"
+          src=${giphy.images.downsized_large.url}
+          alt="Card image cap"
+        />
+      </a>
       <footer class="giphy-footer">
         <i
           @click=${likeGiphy}

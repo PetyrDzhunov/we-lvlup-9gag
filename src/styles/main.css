@@ -611,6 +611,9 @@ a {
   .giphy-footer .comment {
     color: #000000; }
 
+#single-giphy-img {
+  cursor: pointer; }
+
 .category-image {
   width: 20px;
   height: 20px; }

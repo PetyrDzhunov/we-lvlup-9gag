@@ -6,7 +6,8 @@ export default async function likeGiphy(e) {
   let isLiked = false;
 
   if (!user) {
-    return alert('Only logged in users can like or dislike posts');
+    alert('Only logged in users can like or dislike posts');
+    return;
   }
 
   const currentGiphyId = e.target.parentElement.parentElement.dataset.id;
@@ -22,5 +23,6 @@ export default async function likeGiphy(e) {
       .removeClass('bi bi-hand-thumbs-up')
       .addClass('bi bi-hand-thumbs-up-fill');
   }
+
   // after that I can use the length of the array to show how many likes this giphy has
 }

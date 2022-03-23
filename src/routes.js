@@ -5,7 +5,6 @@ const routes = {
   login: '/login',
   register: '/register',
   uploads: '/uploads',
-  details: (id) => `/details/${id}`,
 };
 
 export default routes;
