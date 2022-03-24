@@ -12,17 +12,15 @@ export default async function likeGiphy(e) {
 
   const currentGiphyId = e.target.parentElement.parentElement.dataset.id;
 
-  await addGiphyLikeToFirebase(user.uid, currentGiphyId);
-
-  const currentLikeBtn = e.target;
-
   isLiked = true;
+  const currentLikeBtn = e.target;
 
   if (isLiked) {
     $(currentLikeBtn)
       .removeClass('bi bi-hand-thumbs-up')
       .addClass('bi bi-hand-thumbs-up-fill');
   }
+  await addGiphyLikeToFirebase(user.uid, currentGiphyId);
 
   // after that I can use the length of the array to show how many likes this giphy has
 }
