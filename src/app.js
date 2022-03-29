@@ -9,6 +9,7 @@ import loginPage from './pages/loginPage.js';
 import detailsPage from './pages/detailsPage.js';
 import routes from './routes.js';
 import usersUploadPage from './pages/userUploadsPage.js';
+import favoritesPage from './pages/favoritesPage.js';
 
 page(decorateContext);
 page(routes.home, homePage);
@@ -17,6 +18,7 @@ page(routes.create, createPage);
 page(routes.register, registerPage);
 page(routes.login, loginPage);
 page(routes.uploads, usersUploadPage);
+page(routes.favorites, favoritesPage);
 page('/details/:id', detailsPage);
 
 updateUserNav();

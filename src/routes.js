@@ -4,7 +4,8 @@ const routes = {
   create: '/create-meme',
   login: '/login',
   register: '/register',
-  uploads: '/uploads',
+  favorites: '/favorites',
+  uploads: '/uploads'
 };
 
 export default routes;
