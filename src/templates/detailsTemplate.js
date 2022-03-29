@@ -1,8 +1,27 @@
+/* eslint-disable indent */
+import singleComment from './partials/singleComment.js';
 import likeGiphy from '../utils/fetch/likeGiphy.js';
+import userData from '../utils/data/userData.js';
+import sendCommentToFirebaseAndAttachItToCurrentGif from '../utils/fetch/sendCommentToFirebaseAndAttachItToCurrentGif.js';
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
-export default function detailsTemplate(giphy, isLikedByCurrentUser) {
+const addComment = async (e) => {
+  e.preventDefault();
+  const { uid } = userData.getUserData();
+  const formData = new FormData(e.target);
+  const comment = formData.get('comment');
+  const giphyId =
+    e.target.parentElement.parentElement.querySelector('.card').dataset.id;
+  $('#comment').val('');
+  await sendCommentToFirebaseAndAttachItToCurrentGif(uid, giphyId, comment);
+
+  page.redirect(`/details/${giphyId}`);
+};
+
+export default function detailsTemplate(giphy, isLikedByCurrentUser, comments) {
   const hasCreator = giphy.user || null;
+
+  console.log('re-renered');
   return html`
     <section id="detailsPage">
       <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">
@@ -34,6 +53,23 @@ export default function detailsTemplate(giphy, isLikedByCurrentUser) {
           <i class="giphy-footer__icon comment bi bi-chat-left-fill"></i>
         </footer>
       </div>
+      <section>
+        <form @submit=${addComment}>
+          <article class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea
+              class="form-control"
+              id="comment"
+              rows="4"
+              name="comment"
+            ></textarea>
+            <button type="submit" class="btn btn-primary mt-3">
+              Add comment
+            </button>
+          </article>
+        </form>
+      </section>
+      <article id="comments">${comments.map(singleComment)}</article>
     </section>
   `;
 }

@@ -19,9 +19,19 @@ const checkIfCurrentGiphyIsLikedByCurrentUserLoggedIn = async (uid, giphy) => {
 
 export default async function detailsPage(ctx) {
   const giphy = await getSingleGiphyById(ctx.params.id);
+  console.log(giphy.id);
   const { uid } = userData.getUserData();
+
+  const existingGifs = await gifsRef.get();
+  let currentGiphyComents;
+  existingGifs.forEach((doc) => {
+    const currentGiphyId = doc.data().gif;
+    if (currentGiphyId === giphy.id) {
+      currentGiphyComents = doc.data().comments;
+    }
+  });
 
   const isLikedByCurrentUser =
     await checkIfCurrentGiphyIsLikedByCurrentUserLoggedIn(uid, giphy);
-  ctx.render(detailsTemplate(giphy, isLikedByCurrentUser));
+  ctx.render(detailsTemplate(giphy, isLikedByCurrentUser, currentGiphyComents));
 }
