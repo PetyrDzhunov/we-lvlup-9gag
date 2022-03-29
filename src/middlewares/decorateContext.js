@@ -1,11 +1,13 @@
 import userData from '../utils/data/userData.js';
-import logout from '../utils/authentication/logout.js';
 import getCategories from '../utils/fetch/getDrawerCategories.js';
 import {
   attachInfiniteScrollHandler,
   detachInfiniteScrollHandler
 } from '../utils/fetch/infiniteScroll.js';
 import { render } from 'https://unpkg.com/lit-element/lit-element.js?module';
+
+// eslint-disable-next-line no-use-before-define
+document.querySelector('.logout-btn').addEventListener('click', onLogout);
 
 const root = document.getElementById('page-content');
 
@@ -38,6 +40,13 @@ export function updateUserNav() {
   }
 }
 
+async function onLogout() {
+  userData.clearUserData();
+  await auth.signOut();
+  updateUserNav();
+  page.redirect('/');
+}
+
 const pathsThatRequireInfiniteScroll = ['/', '/fresh-memes'];
 
 export default function decorateContext(ctx, next) {
@@ -46,7 +55,6 @@ export default function decorateContext(ctx, next) {
   } else {
     detachInfiniteScrollHandler();
   }
-  $('.logout-btn').click(logout);
   ctx.render = (content) => render(content, root);
   ctx.updateUserNav = updateUserNav;
   next();
