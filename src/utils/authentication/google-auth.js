@@ -17,6 +17,7 @@ export default function signInWithGoogle() {
       userData.setUserData({ email, uid, token });
       $('#welcome-btn').text(`Hello, ${email.split('@')[0]}`);
       $('.modal-backdrop').hide();
+      $('.modal-open').css('overflow', 'scroll');
       updateUserNav();
       page.redirect(routes.fresh);
     })
