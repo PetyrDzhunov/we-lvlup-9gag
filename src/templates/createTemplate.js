@@ -40,7 +40,5 @@ export default function createMemeTemplate(onUploadSubmit) {
 
     <img id="image-preview"/>
 <img id="output"/>
-
-    ${createMemejQueryFunction()}
   `;
 }

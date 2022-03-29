@@ -1,9 +1,8 @@
 import likeGiphy from '../utils/fetch/likeGiphy.js';
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
-export default function detailsTemplate(giphy) {
+export default function detailsTemplate(giphy, isLikedByCurrentUser) {
   const hasCreator = giphy.user || null;
-
   return html`
     <section id="detailsPage">
       <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">
@@ -23,10 +22,14 @@ export default function detailsTemplate(giphy) {
           alt="Card image cap"
         />
         <footer class="giphy-footer">
-          <i
-            @click=${likeGiphy}
-            class="giphy-footer__icon like bi bi-hand-thumbs-up"
-          ></i>
+          ${isLikedByCurrentUser
+            ? html`<i
+                class="giphy-footer__icon like bi bi-hand-thumbs-up-fill"
+              ></i>`
+            : html`<i
+                @click=${likeGiphy}
+                class="giphy-footer__icon like bi bi-hand-thumbs-up"
+              ></i>`}
           <i class="giphy-footer__icon dislike bi bi-hand-thumbs-down"></i>
           <i class="giphy-footer__icon comment bi bi-chat-left-fill"></i>
         </footer>

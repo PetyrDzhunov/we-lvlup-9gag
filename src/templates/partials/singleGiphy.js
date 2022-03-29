@@ -19,10 +19,10 @@ export default function singleGiphy(giphy) {
       </a>
       <footer class="giphy-footer">
         ${isAtFavorites
-          ? html`<i
+    ? html`<i
               class="giphy-footer__icon like bi bi-hand-thumbs-up-fill"
             ></i>`
-          : html`<i
+    : html`<i
               @click=${likeGiphy}
               class="giphy-footer__icon like bi bi-hand-thumbs-up"
             ></i>`}

@@ -17,13 +17,14 @@ async function registerUser(e) {
   try {
     const userCredential = await auth.createUserWithEmailAndPassword(
       emailInput,
-      passwordInput
+      passwordInput,
     );
     const { email, uid } = userCredential.user;
     const firstName = fullName.split(' ')[0];
     userData.setUserData({ email, uid });
-    $('#login-btn').text(`Hello, ${firstName}`);
+    $('#welcome-btn').text(`Hello, ${firstName}`);
     $('.modal-backdrop').hide();
+    $('.modal-open').css('overflow', 'scroll');
     updateUserNav();
     page.redirect(routes.fresh);
   } catch (err) {
