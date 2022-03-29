@@ -7,21 +7,24 @@ import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 const addComment = async (e) => {
   e.preventDefault();
-  const { uid } = userData.getUserData();
+  const user = userData.getUserData();
   const formData = new FormData(e.target);
   const comment = formData.get('comment');
   const giphyId =
     e.target.parentElement.parentElement.querySelector('.card').dataset.id;
   $('#comment').val('');
-  await sendCommentToFirebaseAndAttachItToCurrentGif(uid, giphyId, comment);
+  await sendCommentToFirebaseAndAttachItToCurrentGif(user, giphyId, comment);
 
   page.redirect(`/details/${giphyId}`);
 };
 
+const cleanComment = (e) => {
+  e.preventDefault();
+  $('#comment').val('');
+};
+
 export default function detailsTemplate(giphy, isLikedByCurrentUser, comments) {
   const hasCreator = giphy.user || null;
-
-  console.log('re-renered');
   return html`
     <section id="detailsPage">
       <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">
@@ -56,16 +59,23 @@ export default function detailsTemplate(giphy, isLikedByCurrentUser, comments) {
       <section>
         <form @submit=${addComment}>
           <article class="form-group">
-            <label for="comment">Comment:</label>
             <textarea
+              placeholder="Comment here..."
               class="form-control"
               id="comment"
               rows="4"
               name="comment"
             ></textarea>
-            <button type="submit" class="btn btn-primary mt-3">
-              Add comment
-            </button>
+            <div class="d-flex flex-row-reverse">
+              <button type="submit" class="btn btn-primary m-2">Post</button>
+              <button
+                @click=${cleanComment}
+                type="button"
+                class="btn btn-secondary m-2"
+              >
+                Cancel
+              </button>
+            </div>
           </article>
         </form>
       </section>

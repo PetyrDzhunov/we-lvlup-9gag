@@ -1,0 +1,12 @@
+#single-comment {
+    background-color: $text-backgrund-hover;
+    border-radius: 12px;
+    p {
+        margin-left: 12px;
+    }
+}
+
+#comment {
+    background-color: $text-backgrund-hover;
+    resize: none;
+}

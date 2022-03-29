@@ -1,7 +1,7 @@
 import { gifsRef } from '../../constants.js';
 
 async function sendCommentToFirebaseAndAttachItToCurrentGif(
-  userID,
+  user,
   gifID,
   comment,
 ) {
@@ -20,16 +20,16 @@ async function sendCommentToFirebaseAndAttachItToCurrentGif(
   if (isAlreadyInDatabase) {
     return gifsRef.doc(currentGiphy).update({
       comments: firebase.firestore.FieldValue.arrayUnion({
-        commentator: userID,
+        commentator: user.email,
         comment,
       }),
     });
   }
 
-  return gifsRef.doc(userID).set({
+  return gifsRef.doc(user.uid).set({
     gif: gifID,
     likes: [],
-    comments: [{ commentator: userID, comment }],
+    comments: [{ commentator: user.email, comment }],
   });
 }
 

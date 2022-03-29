@@ -17,7 +17,7 @@ async function registerUser(e) {
   try {
     const userCredential = await auth.createUserWithEmailAndPassword(
       emailInput,
-      passwordInput,
+      passwordInput
     );
     const { email, uid } = userCredential.user;
     const firstName = fullName.split(' ')[0];

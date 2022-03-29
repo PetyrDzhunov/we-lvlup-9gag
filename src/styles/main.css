@@ -614,6 +614,16 @@ a {
 #single-giphy-img {
   cursor: pointer; }
 
+#single-comment {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 12px; }
+  #single-comment p {
+    margin-left: 12px; }
+
+#comment {
+  background-color: rgba(0, 0, 0, 0.1);
+  resize: none; }
+
 .category-image {
   width: 20px;
   height: 20px; }
