@@ -1,5 +1,3 @@
-import createMemejQueryFunction from '../utils/dom/createjQuery.js';
-
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 const loadFile = function (e) {

@@ -5,7 +5,7 @@ import { giphyApiEndpoints } from '../../giphyEndpoints.js';
 export default async function getMostLiked() {
   try {
     const mostLikedGiphies = await request(
-      `${giphyApiEndpoints.trending}api_key=${giphyAPIkey}&limit=10`,
+      `${giphyApiEndpoints.trending}api_key=${giphyAPIkey}&limit=10`
     );
     return mostLikedGiphies.data;
   } catch (err) {

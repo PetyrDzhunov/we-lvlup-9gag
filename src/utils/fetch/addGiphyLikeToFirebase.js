@@ -16,13 +16,13 @@ export default async function addGiphyLikeToFirebase(userId, gifId) {
 
     if (isAlreadyInDatabase) {
       return gifsRef.doc(currentGiphy).update({
-        likes: firebase.firestore.FieldValue.arrayUnion(userId)
+        likes: firebase.firestore.FieldValue.arrayUnion(userId),
       });
     }
 
     return gifsRef.doc(userId).set({
       gif: gifId,
-      likes: [userId]
+      likes: [userId],
     });
   } catch (error) {
     return error;

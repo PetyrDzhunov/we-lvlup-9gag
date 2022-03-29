@@ -15,7 +15,7 @@ async function loginUser(e) {
   try {
     const userCredential = await auth.signInWithEmailAndPassword(
       emailInput,
-      passwordInput,
+      passwordInput
     );
     const { email, uid } = userCredential.user;
     userData.setUserData({ email, uid });

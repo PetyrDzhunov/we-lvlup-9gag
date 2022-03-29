@@ -2,7 +2,7 @@ export default async function request(
   url,
   method = 'GET',
   body = null,
-  headers = {},
+  headers = {}
 ) {
   try {
     const response = await fetch(url, { method, body, headers });

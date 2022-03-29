@@ -5,7 +5,7 @@ const routes = {
   login: '/login',
   register: '/register',
   favorites: '/favorites',
-  uploads: '/uploads'
+  uploads: '/uploads',
 };
 
 export default routes;

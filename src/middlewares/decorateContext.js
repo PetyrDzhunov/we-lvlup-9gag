@@ -2,7 +2,7 @@ import userData from '../utils/data/userData.js';
 import getCategories from '../utils/fetch/getDrawerCategories.js';
 import {
   attachInfiniteScrollHandler,
-  detachInfiniteScrollHandler
+  detachInfiniteScrollHandler,
 } from '../utils/fetch/infiniteScroll.js';
 import { render } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
