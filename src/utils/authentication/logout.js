@@ -2,14 +2,10 @@
 import { updateUserNav } from '../../middlewares/decorateContext.js';
 import userData from '../data/userData.js';
 
-(function attachLogout() {
-  $(document).ready(function () {
-    $('.logout-btn').click(async function () {
-      userData.clearUserData();
-      await auth.signOut();
-      $('#login-btn').text('Log in');
-      updateUserNav();
-      page.redirect('/');
-    });
-  });
-})();
+export default async function logout() {
+  userData.clearUserData();
+  await auth.signOut();
+  console.log('clicked');
+  updateUserNav();
+  page.redirect('/');
+}

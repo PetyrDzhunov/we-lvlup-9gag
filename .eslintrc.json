@@ -39,6 +39,7 @@
       }
     ],
     "wrap-iife": "off",
-    "allowIndentationTabs": "off"
+    "allowIndentationTabs": "off",
+    "comma-dangle": "off"
   }
 }

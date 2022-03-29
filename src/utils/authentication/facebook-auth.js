@@ -1,3 +1,4 @@
+import { updateUserNav } from '../../middlewares/decorateContext.js';
 import routes from '../../routes.js';
 import userData from '../data/userData.js';
 
@@ -5,32 +6,19 @@ const provider = new firebase.auth.FacebookAuthProvider();
 
 provider.addScope('user_birthday');
 
-const addEventHandlerToFacebookBtn = () => {
-  $(document).ready(function () {
-    $('#fb-btn').click(function () {
-      auth
-        .signInWithPopup(provider)
-        .then((result) => {
-          const { user } = result;
-          const { email, uid } = user;
-          userData.setUserData({ email, uid });
-          $('#login-btn').text(`Hello, ${email.split('@')[0]}`);
-          $('#register-btn').text('Logout');
-          $('.modal-backdrop').hide();
-          page.redirect(routes.fresh);
-        })
-        .catch((error) => {
-          alert(error.message);
-        });
+export default function signInWithFacebook() {
+  auth
+    .signInWithPopup(provider)
+    .then((result) => {
+      const { user } = result;
+      const { email, uid } = user;
+      userData.setUserData({ email, uid });
+      $('#welcome-btn').text(`Hello, ${email.split('@')[0]}`);
+      $('.modal-backdrop').hide();
+      updateUserNav();
+      page.redirect(routes.fresh);
+    })
+    .catch((error) => {
+      alert(error.message);
     });
-  });
-};
-
-export default (function attachFacebookLogin() {
-  addEventHandlerToFacebookBtn();
-  auth.onAuthStateChanged((user) => {
-    if (!user) {
-      addEventHandlerToFacebookBtn();
-    }
-  });
-})();
+}

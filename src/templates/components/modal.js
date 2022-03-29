@@ -1,4 +1,6 @@
 /* eslint-disable indent */
+import signInWithFacebook from '../../utils/authentication/facebook-auth.js';
+import signInWithGoogle from '../../utils/authentication/google-auth.js';
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 const focusModal = () => {
@@ -11,7 +13,7 @@ export default function modalTemplate(
   authenticate,
   onSubmit,
   customId,
-  requiresFullName = false,
+  requiresFullName = false
 ) {
   return html`
     <button
@@ -48,11 +50,21 @@ export default function modalTemplate(
               </button>
             </div>
             <div class="modal__social-button__list">
-              <button type="button" class="modal__btn" id="fb-btn">
+              <button
+                @click=${signInWithFacebook}
+                type="button"
+                class="modal__btn"
+                id="fb-btn"
+              >
                 <i class="bi bi-facebook"></i>
                 Countinue with Facebook
               </button>
-              <button type="button" class="modal__btn" id="google-btn">
+              <button
+                @click=${signInWithGoogle}
+                type="button"
+                class="modal__btn"
+                id="google-btn"
+              >
                 <i class="bi bi-google"></i>
                 Countinue with Google
               </button>

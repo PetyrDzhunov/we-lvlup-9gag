@@ -1,5 +1,5 @@
 import decorateContext, {
-  updateUserNav,
+  updateUserNav
 } from './middlewares/decorateContext.js';
 import homePage from './pages/homePage.js';
 import freshPage from './pages/freshPage.js';

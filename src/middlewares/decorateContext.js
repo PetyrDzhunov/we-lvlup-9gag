@@ -1,11 +1,9 @@
-import '../utils/authentication/logout.js';
-import '../utils/authentication/google-auth.js';
-import '../utils/authentication/facebook-auth.js';
 import userData from '../utils/data/userData.js';
+import logout from '../utils/authentication/logout.js';
 import getCategories from '../utils/fetch/getDrawerCategories.js';
 import {
   attachInfiniteScrollHandler,
-  detachInfiniteScrollHandler,
+  detachInfiniteScrollHandler
 } from '../utils/fetch/infiniteScroll.js';
 import { render } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
@@ -40,9 +38,6 @@ export function updateUserNav() {
   }
 }
 
-// check if window has the scroll listener attached - true/false
-// going to pages that either require or not
-
 const pathsThatRequireInfiniteScroll = ['/', '/fresh-memes'];
 
 export default function decorateContext(ctx, next) {
@@ -51,6 +46,7 @@ export default function decorateContext(ctx, next) {
   } else {
     detachInfiniteScrollHandler();
   }
+  $('.logout-btn').click(logout);
   ctx.render = (content) => render(content, root);
   ctx.updateUserNav = updateUserNav;
   next();
