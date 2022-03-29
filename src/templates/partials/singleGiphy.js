@@ -2,6 +2,8 @@ import likeGiphy from '../../utils/fetch/likeGiphy.js';
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 export default function singleGiphy(giphy) {
+  const isAtFavorites = window.location.href.endsWith('/favorites');
+
   return html`
     <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">
       <div class="card-body">
@@ -16,10 +18,14 @@ export default function singleGiphy(giphy) {
         />
       </a>
       <footer class="giphy-footer">
-        <i
-          @click=${likeGiphy}
-          class="giphy-footer__icon like bi bi-hand-thumbs-up"
-        ></i>
+        ${isAtFavorites
+          ? html`<i
+              class="giphy-footer__icon like bi bi-hand-thumbs-up-fill"
+            ></i>`
+          : html`<i
+              @click=${likeGiphy}
+              class="giphy-footer__icon like bi bi-hand-thumbs-up"
+            ></i>`}
         <i class="giphy-footer__icon dislike bi bi-hand-thumbs-down"></i>
         <i class="giphy-footer__icon comment bi bi-chat-left-fill"></i>
       </footer>

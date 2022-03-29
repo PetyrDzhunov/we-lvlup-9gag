@@ -9,7 +9,6 @@ export default async function likeGiphy(e) {
     alert('Only logged in users can like or dislike posts');
     return;
   }
-
   const currentGiphyId = e.target.parentElement.parentElement.dataset.id;
 
   isLiked = true;

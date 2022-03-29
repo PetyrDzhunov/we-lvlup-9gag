@@ -12,6 +12,9 @@ export default async function getCurrentUserUploadedGifs(uid) {
       .map((currGif) => currGif.gif)
       .join(',');
 
+    if (!gifs) {
+      return [];
+    }
     const currUserGiphies = await getUploadedGifs(gifs);
     return currUserGiphies.data;
   } catch (err) {

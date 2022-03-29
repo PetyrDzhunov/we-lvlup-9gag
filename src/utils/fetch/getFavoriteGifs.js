@@ -1,7 +1,7 @@
 import request from './fetch.js';
+import getSingleGiphyById from './getSingleGiphyById.js';
 import { gifsRef, giphyAPIkey } from '../../constants.js';
 import { baseEndpoint } from '../../giphyEndpoints.js';
-import getSingleGiphyById from './getSingleGiphyById.js';
 
 export default async function getFavoriteGifs(userId) {
   try {
@@ -14,7 +14,7 @@ export default async function getFavoriteGifs(userId) {
     const gifsAsString = gifs
       .filter((current) => current.likes.includes(userId))
       .map((currGif) => currGif.gif)
-      .join(',');
+      .join(', ');
 
     const isMoreThanOne = gifsAsString.includes(',');
 

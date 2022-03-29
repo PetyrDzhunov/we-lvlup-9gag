@@ -5,7 +5,6 @@ import userData from '../data/userData.js';
 export default async function logout() {
   userData.clearUserData();
   await auth.signOut();
-  console.log('clicked');
   updateUserNav();
   page.redirect('/');
 }
