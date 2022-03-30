@@ -59,7 +59,17 @@
                         </ul>
                     </div>
                     <div class="navbar__right-menu">
-
+                        <div class="dropdown user me-4">
+                            <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+												My Profile
+												</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="/profile">My Profile</a></li>
+                                <li><a class="dropdown-item" href="/favorites">Favorites</a></li>
+                                <li><a class="dropdown-item" href="/uploads">My uploads</a></li>
+                                <li><a class="dropdown-item logout-btn">Logout</a></li>
+                            </ul>
+                        </div>
                         <div class="navbar__right-menu-icons">
                             <i class="bi bi-search"></i>
                             <i class="bi bi-chat-right-fill"></i>
@@ -78,10 +88,6 @@
                         <div class="user">
                             <li>
                                 <a class="navbar-link" id="welcome-btn" href="javascript:void(0)"></a>
-                            </li>
-                            <li>
-                                <a class="navbar-link logout-btn signUp-btn">Logout</a>
-                                <i class="menu-arrow bi bi-chevron-compact-down"></i>
                             </li>
                         </div>
 

@@ -422,7 +422,8 @@ a {
 
 .navbar__right-menu {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  align-items: center; }
   .navbar__right-menu-icons {
     margin-right: 20px; }
     .navbar__right-menu-icons i {
@@ -619,6 +620,7 @@ a {
   flex-flow: row wrap;
   margin-bottom: 20px;
   padding: 10px;
+  align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(0, 0, 0, 0.1); }
   .giphy__creator img {
@@ -627,7 +629,8 @@ a {
     border-radius: 50%; }
 
 .giphy__username {
-  font-weight: bolder; }
+  font-weight: bolder;
+  margin-left: 10px; }
 
 .giphy__instagram {
   font-size: 24px;

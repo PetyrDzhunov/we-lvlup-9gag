@@ -33,8 +33,7 @@ export default function detailsTemplate(
   isLikedByCurrentUser = false,
 ) {
   const hasCreator = giphy.user || null;
-  const hasInstagram = giphy.user.instagram_url || null;
-  console.log(giphy);
+  const hasInstagram = giphy.user?.instagram_url || null;
   return html`
     <section id="detailsPage">
       <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">
