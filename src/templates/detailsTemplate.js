@@ -5,9 +5,17 @@ import userData from '../utils/data/userData.js';
 import sendCommentToFirebaseAndAttachItToCurrentGif from '../utils/fetch/sendCommentToFirebaseAndAttachItToCurrentGif.js';
 import { html } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
+const cleanComment = () => {
+  $('#comment').val('');
+};
+
 const addComment = async (e) => {
   e.preventDefault();
   const user = userData.getUserData();
+  if (!user) {
+    cleanComment();
+    return alert('Only logged in users can comment!');
+  }
   const formData = new FormData(e.target);
   const comment = formData.get('comment');
   const giphyId =
@@ -18,13 +26,13 @@ const addComment = async (e) => {
   page.redirect(`/details/${giphyId}`);
 };
 
-const cleanComment = (e) => {
-  e.preventDefault();
-  $('#comment').val('');
-};
-
-export default function detailsTemplate(giphy, isLikedByCurrentUser, comments) {
+export default function detailsTemplate(
+  giphy,
+  comments,
+  isLikedByCurrentUser = false,
+) {
   const hasCreator = giphy.user || null;
+  console.log(isLikedByCurrentUser);
   return html`
     <section id="detailsPage">
       <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">

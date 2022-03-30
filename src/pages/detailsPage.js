@@ -6,6 +6,10 @@ import userData from '../utils/data/userData.js';
 const checkIfCurrentGiphyIsLikedByCurrentUserLoggedIn = async (uid, giphy) => {
   const response = await gifsRef.get();
 
+  if (!uid) {
+    return;
+  }
+
   const gifs = response.docs
     .map((gif) => gif.data())
     .filter((currGiphy) => currGiphy.likes);
@@ -19,7 +23,7 @@ const checkIfCurrentGiphyIsLikedByCurrentUserLoggedIn = async (uid, giphy) => {
 
 export default async function detailsPage(ctx) {
   const giphy = await getSingleGiphyById(ctx.params.id);
-  const { uid } = userData.getUserData();
+  const user = userData.getUserData();
 
   const existingGifs = await gifsRef.get();
   let currentGiphyComments;
@@ -34,9 +38,14 @@ export default async function detailsPage(ctx) {
     currentGiphyComments = [];
   }
 
-  const isLikedByCurrentUser =
-    await checkIfCurrentGiphyIsLikedByCurrentUserLoggedIn(uid, giphy);
+  let isLikedByCurrentUser;
+
+  if (user?.uid) {
+    isLikedByCurrentUser =
+      await checkIfCurrentGiphyIsLikedByCurrentUserLoggedIn(user.uid, giphy);
+  }
+
   ctx.render(
-    detailsTemplate(giphy, isLikedByCurrentUser, currentGiphyComments),
+    detailsTemplate(giphy, currentGiphyComments, isLikedByCurrentUser),
   );
 }
