@@ -14,7 +14,8 @@ const addComment = async (e) => {
   const user = userData.getUserData();
   if (!user) {
     cleanComment();
-    return alert('Only logged in users can comment!');
+    alert('Only logged in users can comment!');
+    return;
   }
   const formData = new FormData(e.target);
   const comment = formData.get('comment');
@@ -32,7 +33,6 @@ export default function detailsTemplate(
   isLikedByCurrentUser = false,
 ) {
   const hasCreator = giphy.user || null;
-  console.log(isLikedByCurrentUser);
   return html`
     <section id="detailsPage">
       <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">

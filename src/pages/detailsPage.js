@@ -7,7 +7,7 @@ const checkIfCurrentGiphyIsLikedByCurrentUserLoggedIn = async (uid, giphy) => {
   const response = await gifsRef.get();
 
   if (!uid) {
-    return;
+    return null;
   }
 
   const gifs = response.docs
@@ -25,6 +25,10 @@ export default async function detailsPage(ctx) {
   const giphy = await getSingleGiphyById(ctx.params.id);
   const user = userData.getUserData();
 
+  if (!user) {
+    page.redirect('/');
+    return;
+  }
   const existingGifs = await gifsRef.get();
   let currentGiphyComments;
   existingGifs.forEach((doc) => {

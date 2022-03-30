@@ -1,3 +1,5 @@
+import getSingleGiphyFromFirebaseById from './getSingleGiphyFromFirebaseById.js';
+import getDocumentIdFromFirebaseByGiphyId from './getDocumentIdFromFirebaseByGiphyId.js';
 import { gifsRef } from '../../constants.js';
 
 async function sendCommentToFirebaseAndAttachItToCurrentGif(
@@ -5,20 +7,13 @@ async function sendCommentToFirebaseAndAttachItToCurrentGif(
   gifID,
   comment,
 ) {
-  const existingGifs = await gifsRef.get();
-  let isAlreadyInDatabase = false;
-  let currentGiphy;
-  existingGifs.forEach((doc) => {
-    const currentGiphyId = doc.data().gif;
-    const currentDocId = doc.id;
-    if (currentGiphyId === gifID) {
-      isAlreadyInDatabase = true;
-      currentGiphy = currentDocId;
-    }
-  });
+  const currentGiphy = await getSingleGiphyFromFirebaseById(gifID);
+  const currenntGiphyDocumentID = await getDocumentIdFromFirebaseByGiphyId(
+    gifID,
+  );
 
-  if (isAlreadyInDatabase) {
-    return gifsRef.doc(currentGiphy).update({
+  if (currentGiphy) {
+    return gifsRef.doc(currenntGiphyDocumentID).update({
       comments: firebase.firestore.FieldValue.arrayUnion({
         commentator: user.email,
         comment,
