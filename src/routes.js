@@ -6,6 +6,8 @@ const routes = {
   register: '/register',
   favorites: '/favorites',
   uploads: '/uploads',
+  profile: '/profile',
+  details: '/details/:id',
 };
 
 export default routes;

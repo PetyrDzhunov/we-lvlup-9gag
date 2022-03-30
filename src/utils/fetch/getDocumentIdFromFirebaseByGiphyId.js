@@ -1,3 +1,5 @@
+import { gifsRef } from '../../constants.js';
+
 async function getDocumentIdFromFirebaseByGiphyId(gifID) {
   const query = await gifsRef.where('gif', '==', gifID).get();
 

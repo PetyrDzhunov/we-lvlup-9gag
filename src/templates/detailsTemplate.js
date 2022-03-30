@@ -19,8 +19,8 @@ const addComment = async (e) => {
   }
   const formData = new FormData(e.target);
   const comment = formData.get('comment');
-  const giphyId =
-    e.target.parentElement.parentElement.querySelector('.card').dataset.id;
+
+  const giphyId = document.querySelector('.card').dataset.id;
   $('#comment').val('');
   await sendCommentToFirebaseAndAttachItToCurrentGif(user, giphyId, comment);
 

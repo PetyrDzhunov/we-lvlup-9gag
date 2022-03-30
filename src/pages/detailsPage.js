@@ -45,11 +45,10 @@ export default async function detailsPage(ctx) {
   let isLikedByCurrentUser;
 
   if (user?.uid) {
-    isLikedByCurrentUser =
-      await checkIfCurrentGiphyIsLikedByCurrentUserLoggedIn(user.uid, giphy);
+    isLikedByCurrentUser = await checkIfCurrentGiphyIsLikedByCurrentUserLoggedIn(user.uid, giphy);
   }
 
   ctx.render(
-    detailsTemplate(giphy, currentGiphyComments, isLikedByCurrentUser),
+    detailsTemplate(giphy, currentGiphyComments, isLikedByCurrentUser)
   );
 }
