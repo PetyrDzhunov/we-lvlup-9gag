@@ -24,10 +24,8 @@ export default function profileTemplate(totalComments, totalLikes) {
           avatars,
         )}&accessoriesType=Sunglasses&hairColor=Blonde&facialHairType=BeardMedium&facialHairColor=Black&clotheType=BlazerSweater&eyeType=Cry&eyebrowType=DefaultNatural&mouthType=Twinkle&skinColor=Brown`}
       />
-      <p>Your post have generated ${totalLikes} likes so far.</p>
-      <p>
-        The amount of comments your posts have generated is ${totalComments}
-      </p>
+      <p>Your posts have generated ${totalLikes} likes so far.</p>
+      <p>Your posts have generated ${totalComments} comments so far</p>
     </div>
   `;
 }
