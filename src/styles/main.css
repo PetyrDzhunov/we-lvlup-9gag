@@ -614,6 +614,28 @@ a {
 #single-giphy-img {
   cursor: pointer; }
 
+.giphy__creator {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  .giphy__creator img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; }
+
+.giphy__username {
+  font-weight: bolder; }
+
+.giphy__instagram {
+  font-size: 24px;
+  color: #9b6161; }
+
+.giphy__description {
+  flex: 1; }
+
 #single-comment {
   background-color: #f0f0f0;
   border-radius: 12px; }

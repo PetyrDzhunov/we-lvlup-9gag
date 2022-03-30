@@ -33,6 +33,8 @@ export default function detailsTemplate(
   isLikedByCurrentUser = false,
 ) {
   const hasCreator = giphy.user || null;
+  const hasInstagram = giphy.user.instagram_url || null;
+  console.log(giphy);
   return html`
     <section id="detailsPage">
       <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">
@@ -40,11 +42,22 @@ export default function detailsTemplate(
           class="card-body d-flex justify-content-center flex-column text-center"
         >
           <h5 class="card-title">${giphy.title}</h5>
-          ${hasCreator
-            ? html`<img src=${giphy.user.avatar_url} />
-                <p>${giphy.user.description}</p>`
-            : null}
-        </div>
+          ${
+            hasCreator
+              ? html` <div class="giphy__creator">
+                  <img src=${giphy.user.avatar_url} />
+                  <p class="giphy__username">${giphy.user.username}</p>
+                  <p class="giphy__description">${giphy.user.description}</p>
+                  ${hasInstagram
+                    ? html` <a
+                        class="giphy__instagram"
+                        href=${giphy.user.instagram_url}
+                        ><i class="bi bi-instagram"></i
+                      ></a>`
+                    : null}
+                </div>`
+              : null
+          }
         <img
           id="single-giphy-img"
           class="card-img-top"
@@ -52,14 +65,16 @@ export default function detailsTemplate(
           alt="Card image cap"
         />
         <footer class="giphy-footer">
-          ${isLikedByCurrentUser
-            ? html`<i
-                class="giphy-footer__icon like bi bi-hand-thumbs-up-fill"
-              ></i>`
-            : html`<i
-                @click=${likeGiphy}
-                class="giphy-footer__icon like bi bi-hand-thumbs-up"
-              ></i>`}
+          ${
+            isLikedByCurrentUser
+              ? html`<i
+                  class="giphy-footer__icon like bi bi-hand-thumbs-up-fill"
+                ></i>`
+              : html`<i
+                  @click=${likeGiphy}
+                  class="giphy-footer__icon like bi bi-hand-thumbs-up"
+                ></i>`
+          }
           <i class="giphy-footer__icon dislike bi bi-hand-thumbs-down"></i>
           <i class="giphy-footer__icon comment bi bi-chat-left-fill"></i>
         </footer>
