@@ -55,8 +55,8 @@ const paginateToggle = function () {
 
 function windowScrollHandler() {
   if (
-    $(window).scrollTop() >=
-    $(document).height() - $(window).height() - 1500
+    $(window).scrollTop()
+    >= $(document).height() - $(window).height() - 1500
   ) {
     if (paginate) {
       paginate = false;

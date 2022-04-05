@@ -1,69 +1,69 @@
 .giphy-footer {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 10px auto;
-    &__icon {
-        font-size: 30px;
-        margin: 12px;
-        cursor: pointer;
-    }
-    .like {
-        color: $primary;
-    }
-    .liked {
-        color: $primary;
-        display: none;
-    }
-    .dislike {
-        color: $danger;
-    }
-    .comment {
-        color: $common-black;
-    }
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px auto;
+  &__icon {
+    font-size: 30px;
+    margin: 12px;
+    cursor: pointer;
+  }
+  .like {
+    color: $primary;
+  }
+  .liked {
+    color: $primary;
+    display: none;
+  }
+  .dislike {
+    color: $danger;
+  }
+  .comment {
+    color: $common-black;
+  }
 }
 
 #single-giphy-img {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .giphy__creator {
-    display: flex;
-    flex-flow: row wrap;
-    margin-bottom: 20px;
-    padding: 10px;
-    align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-    }
-    @media screen and (max-width: 500px) {
-        flex-flow: column wrap !important;
-    }
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+  padding: 10px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  @media screen and (max-width: 500px) {
+    flex-flow: column wrap !important;
+  }
 }
 
 .giphy__username {
-    font-weight: bolder;
-    margin-left: 10px;
+  font-weight: bolder;
+  margin-left: 10px;
 }
 
 .giphy__instagram {
-    font-size: 24px;
-    color: rgb(155, 97, 97);
+  font-size: 24px;
+  color: rgb(155, 97, 97);
 }
 
 .giphy__description {
-    flex: 1;
+  flex: 1;
 }
 
 .single-giphy {
-    width: 100%;
+  width: 100%;
 }
 
 .card-title {
-    @media screen and (max-width: 500px) {
-        font-size: 0.75rem;
-    }
+  @media screen and (max-width: 500px) {
+    font-size: 0.75rem;
+  }
 }

@@ -5,11 +5,11 @@ import { gifsRef } from '../../constants.js';
 async function sendCommentToFirebaseAndAttachItToCurrentGif(
   user,
   gifID,
-  comment,
+  comment
 ) {
   const currentGiphy = await getSingleGiphyFromFirebaseById(gifID);
   const currenntGiphyDocumentID = await getDocumentIdFromFirebaseByGiphyId(
-    gifID,
+    gifID
   );
 
   if (currentGiphy) {

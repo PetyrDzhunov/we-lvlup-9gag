@@ -1,20 +1,20 @@
 .navbar-link {
-    color: $text-color;
-    padding: 0 8px;
-    text-align: center;
-    cursor: pointer;
+  color: $text-color;
+  padding: 0 8px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .navbar-link-mobile {
-    border-bottom: 0px;
+  border-bottom: 0px;
 }
 
 .navbar-list-item {
-    @media screen and (max-width: 1000px) {
-        border-bottom: 1px solid black;
-    }
+  @media screen and (max-width: 1000px) {
+    border-bottom: 1px solid black;
+  }
 }
 
 .navbar-list-item.user {
-    justify-content: center;
+  justify-content: center;
 }

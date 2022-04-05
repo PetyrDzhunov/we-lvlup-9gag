@@ -13,16 +13,15 @@ const avatars = [
   'LongHairCurly',
 ];
 
-const getRandomAvatar = (array) =>
-  array[Math.floor(Math.random() * array.length)];
+const getRandomAvatar = (array) => array[Math.floor(Math.random() * array.length)];
 
 export default function profileTemplate(totalComments, totalLikes) {
   return html`
     <div id="profile-page">
       <img
         src=${`https://avataaars.io/?avatarStyle=Circle&topType=${getRandomAvatar(
-          avatars,
-        )}&accessoriesType=Sunglasses&hairColor=Blonde&facialHairType=BeardMedium&facialHairColor=Black&clotheType=BlazerSweater&eyeType=Cry&eyebrowType=DefaultNatural&mouthType=Twinkle&skinColor=Brown`}
+    avatars
+  )}&accessoriesType=Sunglasses&hairColor=Blonde&facialHairType=BeardMedium&facialHairColor=Black&clotheType=BlazerSweater&eyeType=Cry&eyebrowType=DefaultNatural&mouthType=Twinkle&skinColor=Brown`}
       />
       <p>Your posts have generated ${totalLikes} likes so far.</p>
       <p>Your posts have generated ${totalComments} comments so far</p>

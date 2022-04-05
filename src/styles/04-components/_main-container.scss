@@ -1,93 +1,93 @@
 #app-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 60px !important;
-    width: 100%;
-    padding: 48px 16px 32px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 60px !important;
+  width: 100%;
+  padding: 48px 16px 32px;
+  margin: 0 auto;
 }
 
 #page {
-    margin-left: $drawer-width + 16 !important;
-    width: 100%;
-    margin: auto 32px;
-    margin-top: 20px;
-    @media screen and (max-width: 1000px) {
-        margin: 0 !important;
-    }
+  margin-left: $drawer-width + 16 !important;
+  width: 100%;
+  margin: auto 32px;
+  margin-top: 20px;
+  @media screen and (max-width: 1000px) {
+    margin: 0 !important;
+  }
 }
 
 .page {
-    &__navbar {
-        display: flex;
-        flex-direction: row;
-        &-list {
-            display: flex;
-            flex-flow: row;
-        }
-        &-link {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            height: 36px;
-            margin-right: 8px;
-            color: $text-color;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            text-align: center;
-            white-space: nowrap;
-            line-height: 36px;
-            border-radius: 16px;
-            padding: 8px 16px;
-            font-weight: bolder;
-        }
-        @media screen and (max-width: 1000px) {
-            display: none;
-        }
+  &__navbar {
+    display: flex;
+    flex-direction: row;
+    &-list {
+      display: flex;
+      flex-flow: row;
     }
+    &-link {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      height: 36px;
+      margin-right: 8px;
+      color: $text-color;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      text-align: center;
+      white-space: nowrap;
+      line-height: 36px;
+      border-radius: 16px;
+      padding: 8px 16px;
+      font-weight: bolder;
+    }
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
 }
 
 #page-content {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 700px) {
     width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    @media screen and (max-width: 700px) {
-        width: 100%;
-    }
-    @media screen and (min-width: 1000px) {
-        width: 80%;
-        margin: 0 auto;
-    }
+  }
+  @media screen and (min-width: 1000px) {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 #sidebar {
-    width: 300px;
-    position: relative;
-    height: calc(100% - 60px);
-    margin-left: 30px;
-    @media screen and (max-width: 1000px) {
-        display: none;
-    }
+  width: 300px;
+  position: relative;
+  height: calc(100% - 60px);
+  margin-left: 30px;
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 }
 
 #navbarToggleExternalContent {
-    @media screen and (max-width: 1000px) {
-        display: none;
-        position: absolute;
-    }
+  @media screen and (max-width: 1000px) {
+    display: none;
+    position: absolute;
+  }
 }
 
 .large {
-    @media screen and (max-width: 1000px) {
-        display: none;
-        position: absolute;
-    }
+  @media screen and (max-width: 1000px) {
+    display: none;
+    position: absolute;
+  }
 }
 
 .small {
-    @media screen and (min-width: 1000px) {
-        display: none;
-    }
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
 }

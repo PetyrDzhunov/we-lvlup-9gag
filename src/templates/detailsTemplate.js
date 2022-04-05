@@ -30,7 +30,7 @@ const addComment = async (e) => {
 export default function detailsTemplate(
   giphy,
   comments,
-  isLikedByCurrentUser = false,
+  isLikedByCurrentUser = false
 ) {
   const hasCreator = giphy.user || null;
   const hasInstagram = giphy.user?.instagram_url || null;
