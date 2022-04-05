@@ -399,11 +399,29 @@ a {
   border-radius: 18px;
   font-weight: 700; }
 
+@media screen and (max-width: 1000px) {
+  #navbarSupportedContent {
+    background-color: #ffffff;
+    margin-top: 10px; }
+    #navbarSupportedContent ul {
+      color: #000000;
+      text-align: center; } }
+
 .navbar-link {
   color: #000000;
   padding: 0 8px;
   text-align: center;
   cursor: pointer; }
+
+.navbar-link-mobile {
+  border-bottom: 0px; }
+
+@media screen and (max-width: 1000px) {
+  .navbar-list-item {
+    border-bottom: 1px solid black; } }
+
+.navbar-list-item.user {
+  justify-content: center; }
 
 .navbar-header {
   background-color: #fff;
@@ -429,6 +447,9 @@ a {
     .navbar__right-menu-icons i {
       margin: 4px;
       color: gray; }
+  @media screen and (max-width: 1000px) {
+    .navbar__right-menu {
+      display: none; } }
 
 #login-btn {
   color: gray; }
@@ -449,20 +470,30 @@ a {
   justify-content: center;
   align-items: center; }
 
+.navbar-link-mobile {
+  text-align: center;
+  display: block; }
+  @media screen and (min-width: 1000px) {
+    .navbar-link-mobile {
+      display: none !important; } }
+
 #app-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 60px !important;
-  width: 1228px;
+  width: 100%;
   padding: 48px 16px 32px;
   margin: 0 auto; }
 
 #page {
   margin-left: 256px !important;
-  width: 972px;
+  width: 100%;
   margin: auto 32px;
   margin-top: 20px; }
+  @media screen and (max-width: 1000px) {
+    #page {
+      margin: 0 !important; } }
 
 .page__navbar {
   display: flex;
@@ -484,19 +515,46 @@ a {
     border-radius: 16px;
     padding: 8px 16px;
     font-weight: bolder; }
+  @media screen and (max-width: 1000px) {
+    .page__navbar {
+      display: none; } }
 
 #page-content {
-  width: 640px;
+  width: 100%;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center; }
+  @media screen and (max-width: 700px) {
+    #page-content {
+      width: 100%; } }
+  @media screen and (min-width: 1000px) {
+    #page-content {
+      width: 80%;
+      margin: 0 auto; } }
 
 #sidebar {
   width: 300px;
   position: relative;
   height: calc(100% - 60px);
   margin-left: 30px; }
+  @media screen and (max-width: 1000px) {
+    #sidebar {
+      display: none; } }
+
+@media screen and (max-width: 1000px) {
+  #navbarToggleExternalContent {
+    display: none;
+    position: absolute; } }
+
+@media screen and (max-width: 1000px) {
+  .large {
+    display: none;
+    position: absolute; } }
+
+@media screen and (min-width: 1000px) {
+  .small {
+    display: none; } }
 
 .drawer {
   margin-top: 0;
@@ -518,11 +576,18 @@ a {
     font-weight: bolder;
     text-align: left; }
 
+#drawer-btn {
+  flex: 1;
+  align-self: flex-start; }
+  @media screen and (max-width: 1000px) {
+    #drawer-btn {
+      display: none; } }
+
 .signUpcard {
   display: flex;
   margin: 20px 0;
   text-align: center;
-  width: 240px;
+  width: 180px;
   border-radius: 8px;
   flex-direction: column;
   position: fixed;
@@ -545,6 +610,10 @@ a {
     padding: 10px 12px;
     border-radius: 20px;
     min-width: 150px; }
+
+@media screen and (max-width: 1000px) {
+  .signUpcard.guest {
+    display: none !important; } }
 
 .modal__btn {
   width: 100%;
@@ -627,6 +696,9 @@ a {
     width: 80px;
     height: 80px;
     border-radius: 50%; }
+  @media screen and (max-width: 500px) {
+    .giphy__creator {
+      flex-flow: column wrap !important; } }
 
 .giphy__username {
   font-weight: bolder;
@@ -638,6 +710,13 @@ a {
 
 .giphy__description {
   flex: 1; }
+
+.single-giphy {
+  width: 100%; }
+
+@media screen and (max-width: 500px) {
+  .card-title {
+    font-size: 0.75rem; } }
 
 #single-comment {
   background-color: #f0f0f0;

@@ -37,26 +37,34 @@
         <div class="nav-wrap">
             <nav class="navbar navbar-expand-lg bg-light navbar-light">
                 <div class="container-fluid">
-                    <button class="btn-collapse-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="btn-collapse-toggler" id="drawer-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
                     <a class="navbar-brand" href="/">9GAG</a>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" id="mobile-btn-hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon red-text"></span>
             </button>
-                    <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
-
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li><a class="navbar-link">🔀 Shuffle</a></li>
-                            <li><a class="navbar-link">📱 Get App</a></li>
-                            <li><a class="navbar-link">🔞</a></li>
-                            <li><a class="navbar-link">Donate</a></li>
-                            <li><a class="navbar-link">UA</a></li>
-                            <li><a class="navbar-link">Crypto</a></li>
-                            <li><a class="navbar-link">Ask Germany</a></li>
-                            <li><a class="navbar-link">My Workplace</a></li>
-                            <li><a class="navbar-link">Car</a></li>
+                            <li class="navbar-list-item large"><a class="navbar-link">🔀 Shuffle</a></li>
+                            <li class="navbar-list-item large"><a class="navbar-link">📱 Get App</a></li>
+                            <li class="navbar-list-item large"><a class="navbar-link">🔞</a></li>
+                            <li class="navbar-list-item large"><a class="navbar-link">Donate</a></li>
+                            <li class="navbar-list-item large"><a class="navbar-link">UA</a></li>
+                            <li class="navbar-list-item large"><a class="navbar-link">Crypto</a></li>
+                            <li class="navbar-list-item large"><a class="navbar-link">Ask Germany</a></li>
+                            <li class="navbar-list-item large"><a class="navbar-link">My Workplace</a></li>
+                            <li class="navbar-list-item large"><a class="navbar-link">Car</a></li>
+                            <li class="navbar-list-item small"><a class="navbar-link" href="/create-meme">Create</a></li>
+                            <li class="navbar-list-item small"> <a class="navbar-link" href="/">Home</a></li>
+                            <li class="navbar-list-item small"><a class="navbar-link" class="guest" href="/fresh-memes">Trending</a></li>
+                            <li class="navbar-list-item user" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"><a class="navbar-link navbar-link-mobile" href="/profile">Profile</a></li>
+                            <li class="navbar-list-item user"><a class="navbar-link navbar-link-mobile" href="/favorites">Favorites</a></li>
+                            <li class="navbar-list-item user"><a class="navbar-link navbar-link-mobile" href="/uploads">My uploads</a></li>
+                            <li class="navbar-list-item user"><a class="navbar-link navbar-link-mobile logout-btn-mobile">Logout</a></li>
+                            <li class="navbar-list-item"><a class="navbar-link guest navbar-link-mobile" id="login-btn" href="/login">Log in</a></li>
+                            <li class="navbar-list-item"><a class="navbar-link guest navbar-link-mobile" id="register-btn" href="/register">Sign up</a></li>
                         </ul>
                     </div>
                     <div class="navbar__right-menu">
@@ -103,7 +111,7 @@
             <p class="signUpcard__text">Sign up now to see more content!</p>
             <button class="signUpcard__button">Sign up</button>
         </div>
-        <div class="drawer" id="navbarToggleExternalContent">
+        <div class="drawer collapse" id="navbarToggleExternalContent">
             <div class="drawer__container">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="drawer-list">
                     <h7 class="drawer__heading">9GAG</h7 class="drawer__heading">

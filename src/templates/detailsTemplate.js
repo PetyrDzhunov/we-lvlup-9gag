@@ -36,7 +36,7 @@ export default function detailsTemplate(
   const hasInstagram = giphy.user?.instagram_url || null;
   return html`
     <section id="detailsPage">
-      <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">
+      <div data-id=${giphy.id} class="card m-2">
         <div
           class="card-body d-flex justify-content-center flex-column text-center"
         >

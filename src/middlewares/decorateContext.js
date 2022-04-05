@@ -8,6 +8,9 @@ import { render } from 'https://unpkg.com/lit-element/lit-element.js?module';
 
 // eslint-disable-next-line no-use-before-define
 document.querySelector('.logout-btn').addEventListener('click', onLogout);
+document
+  .querySelector('.logout-btn-mobile')
+  .addEventListener('click', onLogout);
 
 const root = document.getElementById('page-content');
 

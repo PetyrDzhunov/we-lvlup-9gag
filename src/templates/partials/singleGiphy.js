@@ -5,7 +5,7 @@ export default function singleGiphy(giphy) {
   const isAtFavorites = window.location.href.endsWith('/favorites');
 
   return html`
-    <div data-id=${giphy.id} class="card m-2" style="width: 40rem;">
+    <div data-id=${giphy.id} class="card m-2 single-giphy">
       <div class="card-body">
         <h5 class="card-title">${giphy.title}</h5>
       </div>
@@ -19,10 +19,10 @@ export default function singleGiphy(giphy) {
       </a>
       <footer class="giphy-footer">
         ${isAtFavorites
-    ? html`<i
+          ? html`<i
               class="giphy-footer__icon like bi bi-hand-thumbs-up-fill"
             ></i>`
-    : html`<i
+          : html`<i
               @click=${likeGiphy}
               class="giphy-footer__icon like bi bi-hand-thumbs-up"
             ></i>`}
