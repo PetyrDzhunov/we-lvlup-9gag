@@ -410,8 +410,12 @@ body.dark-theme {
     color: #ffffff; }
   body.dark-theme .btn-collapse-toggler {
     background-color: #ffffff; }
-  body.dark-theme .navbar-brand {
+  body.dark-theme #logo {
     color: #ffffff; }
+    body.dark-theme #logo:hover {
+      transform: scale(1.3);
+      transition: 0.3s all ease-in-out;
+      color: #ffffff !important; }
   body.dark-theme .navbar-link {
     color: #ffffff; }
   body.dark-theme .card-body {
@@ -424,12 +428,24 @@ body.dark-theme {
   body.dark-theme .giphy-footer .comment {
     color: #ffffff; }
   body.dark-theme #theme-btn {
-    background-color: white;
+    background-color: #ffffff;
     color: black; }
     body.dark-theme #theme-btn:hover {
       color: lightblue; }
   body.dark-theme #mobile-btn-hamburger {
     background-color: #ffffff; }
+  body.dark-theme .navbar-list-item.small {
+    background-color: black;
+    border-bottom: 1px solid #ffffff; }
+  body.dark-theme .navbar-link-mobile {
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #ffffff; }
+  body.dark-theme .page__navbar-link {
+    color: #ffffff;
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    cursor: pointer; }
 
 body.white-theme {
   background-color: #ffffff;

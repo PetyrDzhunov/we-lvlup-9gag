@@ -37,8 +37,13 @@ body.dark-theme {
     .btn-collapse-toggler {
         background-color: $common-white;
     }
-    .navbar-brand {
+    #logo {
         color: $common-white;
+        &:hover {
+            transform: scale(1.3);
+            transition: 0.3s all ease-in-out;
+            color: $common-white !important;
+        }
     }
     .navbar-link {
         color: $common-white;
@@ -56,7 +61,7 @@ body.dark-theme {
         color: $common-white;
     }
     #theme-btn {
-        background-color: white;
+        background-color: $common-white;
         color: black;
         &:hover {
             color: lightblue;
@@ -64,6 +69,21 @@ body.dark-theme {
     }
     #mobile-btn-hamburger {
         background-color: $common-white;
+    }
+    .navbar-list-item.small {
+        background-color: black;
+        border-bottom: 1px solid $common-white;
+    }
+    .navbar-link-mobile {
+        color: $common-white;
+        background-color: $common-black;
+        border: 1px solid $common-white;
+    }
+    .page__navbar-link {
+        color: $common-white;
+        border: solid 1px rgba(255, 255, 255, 0.4);
+        border-radius: 8px;
+        cursor: pointer;
     }
 }
 
