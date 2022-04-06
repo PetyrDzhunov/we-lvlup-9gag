@@ -1,0 +1,73 @@
+body.dark-theme {
+    background-color: $common-black !important;
+    color: $common-white !important;
+    .drawer {
+        margin-top: 0;
+        height: 100%;
+        position: fixed;
+        overflow: hidden;
+        overscroll-behavior: contain;
+        background-color: $common-black;
+        color: $common-white;
+        margin-top: 230px;
+        width: $drawer-width;
+        margin-right: 16px;
+        &__container {
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden;
+            padding-right: 16px;
+        }
+        &__heading {
+            color: $common-white;
+            font-weight: bolder;
+            text-align: left;
+        }
+        .navbar-link {
+            color: $common-white;
+        }
+    }
+    .signUpcard.guest {
+        border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    .navbar-header {
+        background-color: $common-black;
+        color: $common-white;
+    }
+    .btn-collapse-toggler {
+        background-color: $common-white;
+    }
+    .navbar-brand {
+        color: $common-white;
+    }
+    .navbar-link {
+        color: $common-white;
+    }
+    .card-body {
+        background-color: black;
+        border-radius: 8px;
+    }
+    .single-giphy {
+        background-color: black;
+        border: 1px solid white;
+        border-radius: 8px;
+    }
+    .giphy-footer .comment {
+        color: $common-white;
+    }
+    #theme-btn {
+        background-color: white;
+        color: black;
+        &:hover {
+            color: lightblue;
+        }
+    }
+    #mobile-btn-hamburger {
+        background-color: $common-white;
+    }
+}
+
+body.white-theme {
+    background-color: $common-white;
+    color: $common-black;
+}

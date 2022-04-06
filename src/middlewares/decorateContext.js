@@ -51,7 +51,37 @@ document
 
 const pathsThatRequireInfiniteScroll = ['/', '/fresh-memes'];
 
+const switchThemes = () => {
+  const body = document.querySelector('body');
+  if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('dark-theme');
+    body.classList.remove('light-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    body.classList.remove('dark-theme');
+    body.classList.add('light-theme');
+    localStorage.setItem('theme', 'light');
+  }
+};
+
+let initialRender = true;
+
 export default function decorateContext(ctx, next) {
+  const themeButton = document.getElementById('theme-btn');
+
+  if (initialRender) {
+    initialRender = false;
+    if (localStorage.getItem('theme') === 'dark') {
+      const body = document.querySelector('body');
+      body.classList.add('dark-theme');
+      body.classList.remove('light-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+    themeButton.addEventListener('click', switchThemes);
+  }
+
   if (pathsThatRequireInfiniteScroll.includes(ctx.path)) {
     attachInfiniteScrollHandler();
   } else {

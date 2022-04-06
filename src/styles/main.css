@@ -378,6 +378,63 @@ a {
   font-size: 14px;
   text-decoration: none; }
 
+body.dark-theme {
+  background-color: #000000 !important;
+  color: #ffffff !important; }
+  body.dark-theme .drawer {
+    margin-top: 0;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    overscroll-behavior: contain;
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 230px;
+    width: 240px;
+    margin-right: 16px; }
+    body.dark-theme .drawer__container {
+      width: 100%;
+      height: 100%;
+      overflow-y: hidden;
+      padding-right: 16px; }
+    body.dark-theme .drawer__heading {
+      color: #ffffff;
+      font-weight: bolder;
+      text-align: left; }
+    body.dark-theme .drawer .navbar-link {
+      color: #ffffff; }
+  body.dark-theme .signUpcard.guest {
+    border: 1px solid rgba(255, 255, 255, 0.4); }
+  body.dark-theme .navbar-header {
+    background-color: #000000;
+    color: #ffffff; }
+  body.dark-theme .btn-collapse-toggler {
+    background-color: #ffffff; }
+  body.dark-theme .navbar-brand {
+    color: #ffffff; }
+  body.dark-theme .navbar-link {
+    color: #ffffff; }
+  body.dark-theme .card-body {
+    background-color: black;
+    border-radius: 8px; }
+  body.dark-theme .single-giphy {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 8px; }
+  body.dark-theme .giphy-footer .comment {
+    color: #ffffff; }
+  body.dark-theme #theme-btn {
+    background-color: white;
+    color: black; }
+    body.dark-theme #theme-btn:hover {
+      color: lightblue; }
+  body.dark-theme #mobile-btn-hamburger {
+    background-color: #ffffff; }
+
+body.white-theme {
+  background-color: #ffffff;
+  color: #000000; }
+
 .btn-collapse-toggler {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
@@ -406,6 +463,12 @@ a {
     #navbarSupportedContent ul {
       color: #000000;
       text-align: center; } }
+
+#theme-btn {
+  background-color: #000000;
+  color: #ffffff; }
+  #theme-btn:hover {
+    color: lightblue; }
 
 .navbar-link {
   color: #000000;
