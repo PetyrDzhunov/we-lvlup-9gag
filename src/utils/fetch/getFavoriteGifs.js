@@ -24,7 +24,7 @@ export default async function getFavoriteGifs(userId) {
 
     if (isMoreThanOne) {
       const favoriteGifs = await request(
-        `${baseEndpoint}?ids=${gifsAsString}&api_key=${giphyAPIkey}`,
+        `${baseEndpoint}?ids=${gifsAsString}&api_key=${giphyAPIkey}`
       );
       return favoriteGifs.data;
     }

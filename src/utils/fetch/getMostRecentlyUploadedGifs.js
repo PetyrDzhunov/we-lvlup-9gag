@@ -14,10 +14,9 @@ export default async function getMostRecentlyUploadedGifs() {
       return [];
     }
     const mostRecentlyUploadedGifs = await getUploadedGifs(gifs);
-    const mostRecentlyUploadedGifsSortedByDate =
-      mostRecentlyUploadedGifs.data.sort(
-        (a, b) => new Date(b.import_datetime) - new Date(a.import_datetime),
-      );
+    const mostRecentlyUploadedGifsSortedByDate = mostRecentlyUploadedGifs.data.sort(
+      (a, b) => new Date(b.import_datetime) - new Date(a.import_datetime)
+    );
     return mostRecentlyUploadedGifsSortedByDate;
   } catch (err) {
     return err;
