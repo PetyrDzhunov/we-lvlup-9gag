@@ -16,14 +16,19 @@ export default async function getFavoriteGifs(userId) {
       .map((currGif) => currGif.gif)
       .join(', ');
 
+    if (!gifsAsString) {
+      return [];
+    }
+
     const isMoreThanOne = gifsAsString.includes(',');
 
     if (isMoreThanOne) {
       const favoriteGifs = await request(
-        `${baseEndpoint}?ids=${gifsAsString}&api_key=${giphyAPIkey}`
+        `${baseEndpoint}?ids=${gifsAsString}&api_key=${giphyAPIkey}`,
       );
       return favoriteGifs.data;
     }
+
     const favoriteGif = await getSingleGiphyById(gifsAsString);
     return [favoriteGif];
   } catch (err) {
