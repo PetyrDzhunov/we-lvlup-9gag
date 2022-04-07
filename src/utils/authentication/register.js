@@ -17,7 +17,7 @@ async function registerUser(e) {
   try {
     const userCredential = await auth.createUserWithEmailAndPassword(
       emailInput,
-      passwordInput
+      passwordInput,
     );
     const { email, uid } = userCredential.user;
     const firstName = fullName.split(' ')[0];
@@ -26,7 +26,7 @@ async function registerUser(e) {
     $('.modal-backdrop').hide();
     $('.modal-open').css('overflow', 'scroll');
     updateUserNav();
-    page.redirect(routes.fresh);
+    page.redirect(routes.trending);
   } catch (err) {
     page.redirect(routes.register);
     alert(err.message);

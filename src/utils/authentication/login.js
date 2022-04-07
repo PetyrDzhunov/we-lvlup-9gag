@@ -15,7 +15,7 @@ async function loginUser(e) {
   try {
     const userCredential = await auth.signInWithEmailAndPassword(
       emailInput,
-      passwordInput
+      passwordInput,
     );
     const { email, uid } = userCredential.user;
     userData.setUserData({ email, uid });
@@ -23,7 +23,7 @@ async function loginUser(e) {
     $('.modal-backdrop').hide();
     $('.modal-open').css('overflow', 'scroll');
     updateUserNav();
-    page.redirect(routes.fresh);
+    page.redirect(routes.trending);
   } catch (err) {
     page.redirect(routes.login);
     alert(err.message);

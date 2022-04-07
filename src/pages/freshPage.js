@@ -3,6 +3,5 @@ import getMostRecentlyUploadedGifs from '../utils/fetch/getMostRecentlyUploadedG
 
 export default async function freshPage(ctx) {
   const freshGifs = await getMostRecentlyUploadedGifs();
-  console.log(freshGifs);
   ctx.render(freshTemplate(freshGifs));
 }
