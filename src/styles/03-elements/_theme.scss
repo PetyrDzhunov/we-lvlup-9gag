@@ -1,99 +1,99 @@
 body.dark-theme {
-    background-color: $common-black !important;
-    color: $common-white !important;
-    .drawer {
-        margin-top: 0;
-        height: 100%;
-        position: fixed;
-        overflow: hidden;
-        overscroll-behavior: contain;
-        background-color: $common-black;
-        color: $common-white;
-        margin-top: 230px;
-        width: $drawer-width;
-        margin-right: 16px;
-        &__container {
-            width: 100%;
-            height: 100%;
-            overflow-y: hidden;
-            padding-right: 16px;
-        }
-        &__heading {
-            color: $common-white;
-            font-weight: bolder;
-            text-align: left;
-        }
-        .navbar-link {
-            color: $common-white;
-        }
+  background-color: $common-black !important;
+  color: $common-white !important;
+  .drawer {
+    margin-top: 0;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    overscroll-behavior: contain;
+    background-color: $common-black;
+    color: $common-white;
+    margin-top: 230px;
+    width: $drawer-width;
+    margin-right: 16px;
+    &__container {
+      width: 100%;
+      height: 100%;
+      overflow-y: hidden;
+      padding-right: 16px;
     }
-    .signUpcard.guest {
-        border: 1px solid rgba(255, 255, 255, 0.4);
-    }
-    .navbar-header {
-        background-color: $common-black;
-        color: $common-white;
-    }
-    .btn-collapse-toggler {
-        background-color: $common-white;
-    }
-    #logo {
-        color: $common-white;
-        &:hover {
-            transform: scale(1.3);
-            transition: 0.3s all ease-in-out;
-            color: $common-white !important;
-        }
+    &__heading {
+      color: $common-white;
+      font-weight: bolder;
+      text-align: left;
     }
     .navbar-link {
-        color: $common-white;
+      color: $common-white;
     }
-    .card-body {
-        background-color: black;
-        border-radius: 8px;
+  }
+  .signUpcard.guest {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .navbar-header {
+    background-color: $common-black;
+    color: $common-white;
+  }
+  .btn-collapse-toggler {
+    background-color: $common-white;
+  }
+  #logo {
+    color: $common-white;
+    &:hover {
+      transform: scale(1.3);
+      transition: 0.3s all ease-in-out;
+      color: $common-white !important;
     }
-    .single-giphy {
-        background-color: black;
-        border: 1px solid white;
-        border-radius: 8px;
+  }
+  .navbar-link {
+    color: $common-white;
+  }
+  .card-body {
+    background-color: black;
+    border-radius: 8px;
+  }
+  .single-giphy {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 8px;
+  }
+  .giphy-footer .comment {
+    color: $common-white;
+  }
+  #theme-btn {
+    background-color: $common-white;
+    color: black;
+    &:hover {
+      color: lightblue;
     }
-    .giphy-footer .comment {
-        color: $common-white;
-    }
-    #theme-btn {
-        background-color: $common-white;
-        color: black;
-        &:hover {
-            color: lightblue;
-        }
-    }
-    #mobile-btn-hamburger {
-        background-color: $common-white;
-    }
-    .navbar-list-item.small {
-        background-color: black;
-        border-bottom: 1px solid $common-white;
-    }
-    .navbar-link-mobile {
-        color: $common-white;
-        background-color: $common-black;
-        border: 1px solid $common-white;
-    }
-    .page__navbar-link {
-        color: $common-white;
-        border: solid 1px rgba(255, 255, 255, 0.4);
-        border-radius: 8px;
-        cursor: pointer;
-    }
-    .commentator {
-        color: $common-black;
-    }
-    .comment {
-        color: $common-black;
-    }
+  }
+  #mobile-btn-hamburger {
+    background-color: $common-white;
+  }
+  .navbar-list-item.small {
+    background-color: black;
+    border-bottom: 1px solid $common-white;
+  }
+  .navbar-link-mobile {
+    color: $common-white;
+    background-color: $common-black;
+    border: 1px solid $common-white;
+  }
+  .page__navbar-link {
+    color: $common-white;
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .commentator {
+    color: $common-black;
+  }
+  .comment {
+    color: $common-black;
+  }
 }
 
 body.white-theme {
-    background-color: $common-white;
-    color: $common-black;
+  background-color: $common-white;
+  color: $common-black;
 }

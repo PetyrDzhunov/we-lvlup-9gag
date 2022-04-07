@@ -49,7 +49,7 @@ document
   .querySelector('.logout-btn-mobile')
   .addEventListener('click', onLogout);
 
-const pathsThatRequireInfiniteScroll = ['/', '/fresh-memes'];
+const pathsThatRequireInfiniteScroll = ['/', '/trending'];
 
 const switchThemes = () => {
   const body = document.querySelector('body');

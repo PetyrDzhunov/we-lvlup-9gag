@@ -1,7 +1,8 @@
-import freshMemeTemplate from '../templates/freshTemplate.js';
-import getTenGiphies from '../utils/fetch/getNextGiphies.js';
+import freshTemplate from '../templates/freshTemplate.js';
+import getMostRecentlyUploadedGifs from '../utils/fetch/getMostRecentlyUploadedGifs.js';
 
 export default async function freshPage(ctx) {
-  const tenGiphies = await getTenGiphies();
-  ctx.render(freshMemeTemplate(tenGiphies));
+  const freshGifs = await getMostRecentlyUploadedGifs();
+  console.log(freshGifs);
+  ctx.render(freshTemplate(freshGifs));
 }

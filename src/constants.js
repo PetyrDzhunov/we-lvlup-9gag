@@ -1,4 +1,4 @@
 export const PORT = '3000';
 export const baseUrl = 'http://localhost:3000';
-export const giphyAPIkey = '89hUy2L6QI4iV5Svdp6ZGJEJR3inKFcv';
+export const giphyAPIkey = 'tyGne9ErBOea8y06PwQiX3Dmu0hGO24G';
 export const gifsRef = db.collection('gifs');

@@ -14,6 +14,7 @@ export default async function createPage(ctx) {
     if (currentFormClicked === 'file-upload') {
       form.append('file', file);
       const res = await uploadGiphy(form);
+      console.log(res);
       await uploadUniqueGiphyWithCurrentUserToDB(user.uid, res.data.id);
     } else {
       form.append('source_image_url', urlInput);
